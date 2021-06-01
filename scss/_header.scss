@@ -1,0 +1,46 @@
+/*header*/
+
+.navbar{
+    font-family: $fuente-HeaderFooter;
+    font-weight: 600;
+    font-size: 105%;
+    margin-top: 1%;
+    letter-spacing: 1px;
+    padding: 0 5%;
+    img{
+        width: 244px;
+    }
+}
+
+.nav-link{
+    padding: 30px;
+    margin: 0 5px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.nav-link::before, 
+.nav-link::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #46494d;
+    position: absolute;
+    bottom: 0;
+}
+  
+.nav-link::before{
+    left: 50%;
+    transform: translateX(-50%); 
+}
+  
+.nav-link::after{
+    right: 50%;
+    transform: translateX(50%); 
+}
+  
+.nav-link:hover::before, 
+.nav-link:hover::after{
+    width: 100%;
+    transition-duration: .3s;
+}

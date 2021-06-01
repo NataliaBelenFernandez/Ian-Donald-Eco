@@ -1,0 +1,22 @@
+@mixin titulos {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+@mixin texto-institucional {
+    background-color: $celeste-institucional;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@mixin mvv {
+    background-color: $fondo-mvv;
+    color: $letra-mvv;
+    height: auto;
+    padding:20px;
+    border-radius: 10px;
+}

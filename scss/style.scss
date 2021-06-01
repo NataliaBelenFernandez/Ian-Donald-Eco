@@ -1,0 +1,502 @@
+@import "generales";
+@import "variables";
+@import "mixin";
+@import "header";
+@import "footer";
+
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    font-family: $fuenteMain;
+}
+
+/*carousel*/
+
+.carouselBootstrap{
+    margin-top: 3%;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #fff;
+    text-align:center;
+    background: $color-transparente;
+    h1,h2{
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 15px;
+    }
+    p{
+        font-weight: 400;
+        font-size: 14px;
+    }
+}
+
+.img-slide1{
+    height: 100vh;
+    background-image: url("../imagenes/slide1.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+
+}
+  
+.img-slide2{
+    height: 100vh;
+    background-image: url("../imagenes/slide2.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    
+}
+  
+.img-slide3{
+    height: 100vh;
+    background-image: url("../imagenes/slide3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+/*tarjetas de novedades*/
+
+.novedades{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+}
+
+.novedades__card{
+    margin: 1%;
+    text-align: center;
+    flex-basis: 30%;
+}
+
+.novedades__titulo{
+    @include titulos();
+    color: #1d252d;
+    margin-bottom: 5%;
+
+}
+
+.novedades__parrafo{
+    color: #333f48;;
+    font-size: 14px;
+    margin: 5%;
+}
+
+.animate__animated.animate__fadeInUp {
+    --animate-duration: 2s;
+}
+
+.animate__animated.animate__fadeIn {
+    --animate-duration: 3s;
+}
+
+/*obras sociales*/
+
+.oS{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 2%;
+}
+
+.obras-sociales{
+    background-image: url("../imagenes/osfondo.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding: 1%;
+}
+
+.obras-sociales__imagenes{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.obras-sociales__titulo{
+    @include titulos();
+    padding: 2%;
+    text-align: center;
+    color: #bbbbbb;
+    background: $color-transparente;
+}
+
+
+.obras-sociales__imagenes--img{
+    width: 11%;
+    opacity: 0.9;
+    padding: .5%;
+    transition: transform .4s;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+
+
+/* empieza el main de Institucianal con Grid */
+
+.institucional{
+	width: 90%;
+	margin: 3% auto;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, auto);
+	grid-template-areas: "sobrenostexto sobrenosimg sobrenosimg "
+						 "staffimg staffimg stafftexto"
+						 "misiontexto visiontexto valorestexto";
+}
+
+.institucional__titulo{
+    @include titulos();
+    text-align: center;
+    padding: 10px;
+    color: #1d252d;
+}
+
+.institucional__parrafo{
+    font-size: 14px;
+    color: #333f48;
+    letter-spacing: 1px;
+    text-align: justify;
+}
+
+.institucional__imagen{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.institucional__sobrenos{
+    grid-area: sobrenostexto;
+    @include texto-institucional();
+
+}
+
+.institucional__sobrenos-img{
+    grid-area: sobrenosimg;
+}
+
+
+.institucional__staff{
+    grid-area: stafftexto;
+    @include texto-institucional();
+
+}
+
+.institucional__staff-img{
+    grid-area: staffimg;
+}
+
+.institucional__mision{
+    grid-area: misiontexto;
+    @include mvv();
+
+}
+
+
+.institucional__vision{
+    grid-area: visiontexto;
+    @include mvv();
+
+}
+
+.institucional__valores{
+    grid-area: valorestexto;
+    @include mvv();
+}
+
+
+/* servicios */
+
+.serviciosGrales{
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.estudios{
+    padding: 20px;
+    margin: 1% 5% 0% 5%;
+}
+ 
+.estudios__titulo{
+    @include titulos();
+    border-bottom: 3px solid #830065;
+    margin-bottom: 15px;
+}
+
+.estudios__subtitulo{
+    list-style: none;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 5px;
+    margin: 2%;
+}
+
+.estudios__ul{
+    padding: 5px;
+    margin: 2%;
+    list-style-image: url("../imagenes/flecha.png");
+    list-style-position: inside;
+    
+}
+
+.especialidades{ 
+    padding: 20px;
+    margin: 0% 5% 1% 5%;
+}
+
+.especialidades__titulo{
+    @extend.estudios__titulo;
+    text-align: right;
+}
+
+.especialidades__subtitulo{
+    @extend.estudios__subtitulo;
+    text-align: right;
+}
+
+.especialidades__ul{
+    @extend.estudios__ul;
+    text-align: right;
+    
+}
+
+
+
+/*formulario de contacto*/
+
+.contacto{
+    width: 100%;
+    height: 100%;
+    background-image: url("../imagenes/contacto.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding: 4%;
+    margin-top: 3%;
+}
+
+
+.formulario{
+    width: 450px;
+    margin: 3% auto;
+    background: $color-transparente;
+    padding: 3%;
+    border-radius: 4%;
+}
+
+.formulario__titulo{
+    @include titulos();
+    color: #fff;
+    text-align: center;
+    margin:0;
+    margin-bottom: 20px;
+
+}
+
+.formulario__input{
+    width: 100%;
+    margin-bottom: 3%;
+    padding: 1%;
+    font-size: 17px;
+    border: none;
+    &:focus{
+        outline: none;
+    }
+    &::placeholder{
+        font-size: 14px;
+        color: rgb(158, 157, 157);
+    }
+}
+
+
+.formulario__textarea{
+    width: 100%;
+    min-height: 140px;
+    padding: 1%;
+    resize: none;
+    &:focus{
+        outline: none;
+    
+    }
+    &::placeholder{
+        font-size: 14px;
+        color: rgb(158, 157, 157);
+    }
+    
+}
+
+
+.formulario__boton{
+    width: 100%;
+    font-size: 15px;
+    background-color: #2d2d30;
+    border: none;
+    padding: 2%;
+    color: white;
+    &:hover{
+        cursor: pointer;
+        background-color:#205455;
+    
+    }
+
+}
+
+
+/*mapa*/
+
+.mapa{
+    text-align: center;
+    margin: 3% 0% 10%;
+}
+
+.mapa__titulo{
+    @include titulos();
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+/*error 404*/
+
+.error404{
+    height: 100vh;
+    font-family: $fuenteMain;
+    background-image:url("../imagenes/error404.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+  
+.error404__contenedor{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #343434;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    flex-wrap: wrap;
+    h1{
+        font-size: 160px;
+        margin: 0;
+        font-weight: 900;
+        letter-spacing: 20px;
+    }
+
+    h2{
+        @include titulos();
+    }
+
+    p{
+        padding: 2%;
+        font-weight: 600;
+    }
+
+    a{
+        text-decoration: none;
+        background: #830065aa;
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 25px;
+        font-size: 14px;
+        text-transform: uppercase;
+        transition: 0.4s;
+        &:hover{
+            background: #830065;
+        }
+    }
+  
+}
+
+
+/*responsive*/
+
+@media screen and (max-width: 480px){
+    .formulario{
+        width: 85%;
+    }
+
+}
+
+
+@media screen and (max-width: 768px){
+    .novedades{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .novedades__titulo{
+        font-size: 85%;
+    }
+
+    .novedades__parrafo{
+        font-size: 82%;
+    }
+
+    .obras-sociales__titulo{
+        font-size: 88%;
+    }
+
+    .pie__titulo, .pie__parrafo, .pie__li{
+        font-size: 88%;
+    }
+
+}
+
+@media screen and (max-width: 900px){
+    .pie{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+}
+
+@media screen and (max-width: 991px){
+  
+    .nav-link{
+        padding: 5px;
+        margin: 1px;
+    }
+}
+
+
+@media all and (max-width: 1024px){
+    .institucional {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+    }
+
+
+  
+
+}
