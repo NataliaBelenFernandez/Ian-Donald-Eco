@@ -49,69 +49,71 @@ footer {
   height: 100%; }
 
 .pie {
-  font-family: "Quicksand", sans-serif;
   width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  font-family: "Quicksand", sans-serif;
   background-color: #24262b;
-  padding: 2% 1%; }
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2%; }
+
+.pie__div1 {
+  flex-basis: 40%; }
+
+.pie__div2 {
+  flex-basis: 25%; }
+
+.pie__div3 {
+  flex-basis: 15%; }
+  .pie__div3 a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease; }
+    .pie__div3 a:hover {
+      color: #24262b;
+      background-color: #ffffff; }
 
 .pie__titulo {
   font-size: 17px;
   color: #ffffff;
   text-transform: capitalize;
-  margin-bottom: 5%;
-  font-weight: 500;
   position: relative; }
-  .pie__titulo::before {
-    content: '';
+  .pie__titulo:before {
     position: absolute;
-    left: 0;
-    bottom: -10px;
-    background-color: #830065;
+    content: '';
+    top: 24px;
     height: 2px;
-    width: 65px; }
+    width: 80%;
+    background: #830065; }
 
 .pie__parrafo {
   font-size: 15px;
-  color: #bbbbbb; }
+  color: #bbbbbb;
+  margin-top: 4%; }
 
 .pie__ul {
-  list-style: none; }
-
-.pie__ul--contact {
-  margin-top: 13%; }
+  list-style: none;
+  margin-top: 6%; }
 
 .pie__li {
   font-size: 15px;
-  color: #bbbbbb;
-  margin-bottom: 2%; }
+  color: #bbbbbb; }
+  .pie__li a {
+    font-size: 14px;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease; }
+    .pie__li a:hover {
+      text-decoration: none;
+      color: #ffffff; }
 
-.pie__quienes-a {
-  font-size: 14px;
-  color: #bbbbbb;
-  display: block;
-  transition: all 0.3s ease; }
-  .pie__quienes-a:hover {
-    text-decoration: none;
-    color: #ffffff; }
-
-.pie__redes-a {
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  background-color: rgba(255, 255, 255, 0.2);
-  margin: 10px 10px 10px 0;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 50%;
-  color: #ffffff;
-  transition: all 0.5s ease;
-  margin-top: 15%; }
-  .pie__redes-a:hover {
-    color: #24262b;
-    background-color: #ffffff; }
+.pie__redes {
+  margin-top: 12%; }
 
 .copyright {
   width: 100%;
@@ -281,6 +283,19 @@ main {
   padding: 10px;
   color: #1d252d; }
 
+.institucional__h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 1px; }
+
+.institucional__h4 {
+  font-weight: 600;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 1px; }
+
 .institucional__parrafo {
   font-size: 14px;
   color: #333f48;
@@ -342,12 +357,18 @@ main {
   width: 100%;
   margin-top: 3%;
   display: flex;
+  color: #000000;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  background-image: url("../imagenes/servicios.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
 
 .estudios {
-  padding: 20px;
-  margin: 1% 5% 0% 5%; }
+  padding: 5%;
+  margin: 5% 10%;
+  background-color: rgba(172, 169, 169, 0.7); }
 
 .estudios__titulo, .especialidades__titulo {
   width: 100%;
@@ -355,8 +376,7 @@ main {
   font-weight: 600;
   font-size: 17px;
   letter-spacing: 1px;
-  border-bottom: 3px solid #830065;
-  margin-bottom: 15px; }
+  border-bottom: 3px solid #830065; }
 
 .estudios__subtitulo, .especialidades__subtitulo {
   list-style: none;
@@ -372,8 +392,9 @@ main {
   list-style-position: inside; }
 
 .especialidades {
-  padding: 20px;
-  margin: 0% 5% 1% 5%; }
+  padding: 5%;
+  margin: 1% 10%;
+  background-color: rgba(172, 169, 169, 0.7); }
 
 .especialidades__titulo {
   text-align: right; }
@@ -528,7 +549,11 @@ main {
 @media screen and (max-width: 900px) {
   .pie {
     flex-direction: column;
-    justify-content: space-evenly; } }
+    justify-content: space-evenly; }
+  .pie__parrafo, .pie__ul, .pie__redes {
+    margin-top: 4%; }
+  .pie__titulo:before {
+    width: 20%; } }
 
 @media screen and (max-width: 991px) {
   .nav-link {

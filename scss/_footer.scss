@@ -6,86 +6,88 @@ footer{
 }
 
 .pie{
+	width: 100%;
 	font-family: $fuente-HeaderFooter;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
 	background-color: $fondo-footer;
-    padding: 2% 1%;
-   
+	display: flex;
+    justify-content: space-evenly;
+	padding: 2%;
+	
+}
+
+.pie__div1{
+	flex-basis: 40%;
+	
+}
+
+.pie__div2{
+	flex-basis: 25%;
+}
+
+.pie__div3{
+	flex-basis: 15%;
+	a{
+		display: inline-block;
+		height: 40px;
+		width: 40px;
+		background-color: rgba(255,255,255,0.2);
+		text-align: center;
+		line-height: 40px;
+		border-radius: 50%;
+		color: #ffffff;
+		transition: all 0.5s ease;
+		&:hover{
+			color: #24262b;
+			background-color: #ffffff;
+		}
+	}
 }
 
 .pie__titulo{
 	font-size: 17px;
 	color: #ffffff;
 	text-transform: capitalize;
-	margin-bottom: 5%;
-	font-weight: 500;
 	position: relative;
-	&::before{
-		content: '';
+  	&:before{
 		position: absolute;
-		left:0;
-		bottom: -10px;
-		background-color: #830065;
-		height: 2px;
-		width: 65px;
+	  	content: '';
+	  	top: 24px;
+	  	height: 2px;
+	  	width: 80%;
+	  	background: $color-obispo;
 	}
 }
-
 
 .pie__parrafo{
     font-size: 15px;
     color: #bbbbbb;
+	margin-top: 4%;
 }
 
 .pie__ul{
     list-style: none;
+	margin-top: 6%;
 }
-
-.pie__ul--contact{
-    margin-top: 13%;
-}
-
 
 .pie__li{
-    font-size: 15px;
+	font-size: 15px;
     color: #bbbbbb;
-	margin-bottom: 2%;
+	a{
+		font-size: 14px;
+		color: #bbbbbb;
+		display: block;
+		transition: all 0.3s ease;
+		&:hover{
+			text-decoration: none;
+			color: #ffffff;
+		}
+	}
     
 }
 
-.pie__quienes-a{
-	font-size: 14px;
-	color: #bbbbbb;
-	display: block;
-	transition: all 0.3s ease;
-	&:hover{
-		text-decoration: none;
-		color: #ffffff;
-	}
+.pie__redes{
+	margin-top: 12%;
 }
-
-
-.pie__redes-a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(255,255,255,0.2);
-	margin: 10px 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.5s ease;
-    margin-top: 15%;
-	&:hover{
-		color: #24262b;
-		background-color: #ffffff;
-	}
-}
-
 
 .copyright{
     width: 100%;
