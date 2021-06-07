@@ -194,19 +194,21 @@ main{
     color: #1d252d;
 }
 
-.institucional__h3{
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 14px;
-    text-align: center;
+.institucional__datos{
+    text-align: left;
+    margin-top: 18%;
     letter-spacing: 1px;
-}
-
-.institucional__h4{
+    h3{
     font-weight: 600;
-    font-size: 12px;
-    text-align: center;
-    letter-spacing: 1px;
+    font-size: 15px;
+    text-transform: uppercase;}
+    h4{
+        font-weight: 600;
+        font-size: 13px;
+    }
+    h5{
+        font-size: 12px;
+    }
 }
 
 .institucional__parrafo{
@@ -288,7 +290,8 @@ main{
  
 .estudios__titulo{
     @include titulos();
-    border-bottom: 3px solid $color-obispo;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(90deg, rgb(39, 39, 39) 15%, $color-obispo 83%) 1;
 }
 
 .estudios__subtitulo{
@@ -531,12 +534,25 @@ main{
 }
 
 @media screen and (max-width: 991px){
-  
+    
+    .navbar{
+        padding: 0 2%;
+        img{
+            width: 184px;
+        }
+    }
+
     .nav-link{
         padding: 5px;
         margin: 1px;
     }
+    
+    .nav-link::before, 
+    .nav-link::after{
+        height: 2px;
+    }
 }
+
 
 
 @media all and (max-width: 1024px){
