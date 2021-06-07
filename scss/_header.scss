@@ -4,16 +4,15 @@
     font-family: $fuente-HeaderFooter;
     font-weight: 600;
     font-size: 105%;
-    margin-top: 1%;
     letter-spacing: 1px;
-    padding: 0 5%;
+    padding: 1% 4% 0%;
     img{
         width: 244px;
     }
 }
 
 .nav-link{
-    padding: 30px;
+    padding: 20px;
     margin: 0 5px;
     position: relative;
     overflow: hidden; 

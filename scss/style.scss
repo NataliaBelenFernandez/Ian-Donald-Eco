@@ -19,7 +19,7 @@ main{
 /*carousel*/
 
 .carouselBootstrap{
-    margin-top: 3%;
+    margin-top: 2%;
 }
 
 .carousel-caption {
@@ -27,7 +27,6 @@ main{
     right: 0;
     bottom: 0;
     left: 0;
-    padding-top: 30px;
     padding-bottom: 30px;
     color: #fff;
     text-align:center;
@@ -44,7 +43,7 @@ main{
 }
 
 .img-slide1{
-    height: 100vh;
+    height: 85vh;
     background-image: url("../imagenes/slide1.jpg");
     background-repeat: no-repeat;
     background-position:center;
@@ -53,7 +52,7 @@ main{
 }
   
 .img-slide2{
-    height: 100vh;
+    height: 85vh;
     background-image: url("../imagenes/slide2.jpg");
     background-repeat: no-repeat;
     background-position: right;
@@ -62,7 +61,7 @@ main{
 }
   
 .img-slide3{
-    height: 100vh;
+    height: 85vh;
     background-image: url("../imagenes/slide3.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -177,7 +176,7 @@ main{
 
 .institucional{
 	width: 90%;
-	margin: 3% auto;
+	margin: 2% auto;
 	display: grid;
 	grid-gap: 10px;
 	grid-template-columns: repeat(3, 1fr);
@@ -270,7 +269,7 @@ main{
 
 .serviciosGrales{
     width: 100%;
-    margin-top: 3%;
+    margin-top: 2%;
     display: flex;
     color: #000000;
     flex-direction: column;
@@ -340,7 +339,7 @@ main{
     background-size:cover;
     background-repeat: no-repeat;
     padding: 4%;
-    margin-top: 3%;
+    margin-top: 2%;
 }
 
 
@@ -414,7 +413,7 @@ main{
 
 .mapa{
     text-align: center;
-    margin: 3% 0% 10%;
+    margin: 2% 0% 10%;
 }
 
 .mapa__titulo{

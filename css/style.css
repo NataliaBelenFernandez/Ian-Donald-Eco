@@ -9,14 +9,13 @@
   font-family: "Quicksand", sans-serif;
   font-weight: 600;
   font-size: 105%;
-  margin-top: 1%;
   letter-spacing: 1px;
-  padding: 0 5%; }
+  padding: 1% 4% 0%; }
   .navbar img {
     width: 244px; }
 
 .nav-link {
-  padding: 30px;
+  padding: 20px;
   margin: 0 5px;
   position: relative;
   overflow: hidden; }
@@ -134,14 +133,13 @@ main {
 
 /*carousel*/
 .carouselBootstrap {
-  margin-top: 3%; }
+  margin-top: 2%; }
 
 .carousel-caption {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
-  padding-top: 30px;
   padding-bottom: 30px;
   color: #fff;
   text-align: center;
@@ -155,21 +153,21 @@ main {
     font-size: 14px; }
 
 .img-slide1 {
-  height: 100vh;
+  height: 85vh;
   background-image: url("../imagenes/slide1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
 
 .img-slide2 {
-  height: 100vh;
+  height: 85vh;
   background-image: url("../imagenes/slide2.jpg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover; }
 
 .img-slide3 {
-  height: 100vh;
+  height: 85vh;
   background-image: url("../imagenes/slide3.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -266,7 +264,7 @@ main {
 /* empieza el main de Institucianal con Grid */
 .institucional {
   width: 90%;
-  margin: 3% auto;
+  margin: 2% auto;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
@@ -356,7 +354,7 @@ main {
 /* servicios */
 .serviciosGrales {
   width: 100%;
-  margin-top: 3%;
+  margin-top: 2%;
   display: flex;
   color: #000000;
   flex-direction: column;
@@ -414,7 +412,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 4%;
-  margin-top: 3%; }
+  margin-top: 2%; }
 
 .formulario {
   width: 450px;
@@ -471,7 +469,7 @@ main {
 /*mapa*/
 .mapa {
   text-align: center;
-  margin: 3% 0% 10%; }
+  margin: 2% 0% 10%; }
 
 .mapa__titulo {
   width: 100%;
