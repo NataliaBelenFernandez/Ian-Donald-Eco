@@ -363,8 +363,7 @@ main {
   justify-content: space-between;
   background-image: url("../imagenes/servicios.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-repeat: no-repeat; }
 
 .estudios {
   padding: 5%;
