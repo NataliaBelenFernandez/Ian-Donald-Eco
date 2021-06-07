@@ -43,7 +43,7 @@ main{
 }
 
 .img-slide1{
-    height: 85vh;
+    height: 82vh;
     background-image: url("../imagenes/slide1.jpg");
     background-repeat: no-repeat;
     background-position:center;
@@ -52,7 +52,7 @@ main{
 }
   
 .img-slide2{
-    height: 85vh;
+    height: 82vh;
     background-image: url("../imagenes/slide2.jpg");
     background-repeat: no-repeat;
     background-position: right;
@@ -61,7 +61,7 @@ main{
 }
   
 .img-slide3{
-    height: 85vh;
+    height: 82vh;
     background-image: url("../imagenes/slide3.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -533,7 +533,7 @@ main{
 @media screen and (max-width: 991px){
     
     .navbar{
-        padding: 0 2%;
+        padding: 2% 2%;
         img{
             width: 184px;
         }
@@ -547,6 +547,18 @@ main{
     .nav-link::before, 
     .nav-link::after{
         height: 2px;
+    }
+
+    .img-slide1{
+        height: 85vh;
+    }
+      
+    .img-slide2{
+        height: 85vh;
+    }
+      
+    .img-slide3{
+        height: 85vh;   
     }
 }
 
