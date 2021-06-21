@@ -17,6 +17,16 @@ footer{
 
 .pie__div1{
 	flex-basis: 40%;
+	a{
+		font-size: 0.813rem;
+		color: $color-blanco;
+		display: block;
+		transition: all 0.3s ease;
+		&:hover{
+			text-decoration: none;
+			color: $gris-claro;
+		}
+	}
 	
 }
 
@@ -69,16 +79,6 @@ footer{
 	margin-top: 6%;
 	@include parrafo();
 	color: $color-blanco;
-	a{
-		font-size: 0.875rem;
-		color: $color-blanco;
-		display: block;
-		transition: all 0.3s ease;
-		&:hover{
-			text-decoration: none;
-			color: $gris-claro;
-		}
-	}
 }
 
 .pie__redes{

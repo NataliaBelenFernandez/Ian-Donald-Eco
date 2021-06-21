@@ -135,7 +135,7 @@ main{
     background-image: url("../imagenes/osfondo.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    padding: 2%;
+    padding: 5% 2%;
 }
 
 .obras-sociales__imagenes{
@@ -409,7 +409,8 @@ main{
 
 .mapa{
     text-align: center;
-    margin: 2% 0% 10%;
+    padding: 2% 0% 7%;
+    background-color: $gris-claro;
 }
 
 .mapa__titulo{
