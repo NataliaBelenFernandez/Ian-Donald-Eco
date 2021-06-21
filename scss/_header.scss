@@ -3,7 +3,7 @@
 .navbar{
     font-family: $fuente-HeaderFooter;
     font-weight: 600;
-    font-size: 105%;
+    font-size: 1.063rem;
     letter-spacing: 1px;
     margin-top: .5%;
     padding-right: 4%;
@@ -25,7 +25,7 @@
     content: "";
     width: 0;
     height: 3px;
-    background-color: #46494d;
+    background-color: $gris-topo;
     position: absolute;
     bottom: 0;
 }

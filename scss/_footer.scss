@@ -8,7 +8,7 @@ footer{
 .pie{
 	width: 100%;
 	font-family: $fuente-HeaderFooter;
-	background-color: $fondo-footer;
+	background-color: $gris-iron;
 	display: flex;
     justify-content: space-evenly;
 	padding: 2%;
@@ -30,22 +30,22 @@ footer{
 		display: inline-block;
 		height: 40px;
 		width: 40px;
-		background-color: rgba(255,255,255,0.2);
+		background-color: $gris-topo;
 		text-align: center;
 		line-height: 40px;
 		border-radius: 50%;
-		color: #ffffff;
+		color: $color-blanco;
 		transition: all 0.5s ease;
 		&:hover{
-			color: #24262b;
-			background-color: #ffffff;
+			color: $gris-carbon;
+			background-color: $color-blanco;
 		}
 	}
 }
 
 .pie__titulo{
-	font-size: 17px;
-	color: #ffffff;
+	font-size: 1.063rem;
+	color: $color-blanco;
 	text-transform: capitalize;
 	position: relative;
   	&:before{
@@ -59,30 +59,26 @@ footer{
 }
 
 .pie__parrafo{
-    font-size: 15px;
-    color: #bbbbbb;
+	@include parrafo();
+	color: $color-blanco;
 	margin-top: 4%;
 }
 
 .pie__ul{
     list-style: none;
 	margin-top: 6%;
-}
-
-.pie__li{
-	font-size: 15px;
-    color: #bbbbbb;
+	@include parrafo();
+	color: $color-blanco;
 	a{
-		font-size: 14px;
-		color: #bbbbbb;
+		font-size: 0.875rem;
+		color: $color-blanco;
 		display: block;
 		transition: all 0.3s ease;
 		&:hover{
 			text-decoration: none;
-			color: #ffffff;
+			color: $gris-claro;
 		}
 	}
-    
 }
 
 .pie__redes{
@@ -92,8 +88,8 @@ footer{
 .copyright{
     width: 100%;
     height: 100%;
-    background-color: $fondo-copyright;
-    color: #bbbbbb;
-    font-size: 14px;
+    background-color: $gris-carbon;
+    color: $gris-claro;
+	font-size: 0.875rem;
     padding: 1%;
 }

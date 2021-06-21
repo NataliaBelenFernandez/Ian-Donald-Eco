@@ -8,7 +8,7 @@
 .navbar {
   font-family: "Quicksand", sans-serif;
   font-weight: 600;
-  font-size: 105%;
+  font-size: 1.063rem;
   letter-spacing: 1px;
   margin-top: .5%;
   padding-right: 4%;
@@ -52,7 +52,7 @@ footer {
 .pie {
   width: 100%;
   font-family: "Quicksand", sans-serif;
-  background-color: #24262b;
+  background-color: #222227;
   display: flex;
   justify-content: space-evenly;
   padding: 2%; }
@@ -69,18 +69,18 @@ footer {
     display: inline-block;
     height: 40px;
     width: 40px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #46494d;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
     color: #ffffff;
     transition: all 0.5s ease; }
     .pie__div3 a:hover {
-      color: #24262b;
+      color: #111214;
       background-color: #ffffff; }
 
 .pie__titulo {
-  font-size: 17px;
+  font-size: 1.063rem;
   color: #ffffff;
   text-transform: capitalize;
   position: relative; }
@@ -93,25 +93,27 @@ footer {
     background: #830065; }
 
 .pie__parrafo {
-  font-size: 15px;
-  color: #bbbbbb;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 25px;
+  color: #ffffff;
   margin-top: 4%; }
 
 .pie__ul {
   list-style: none;
-  margin-top: 6%; }
-
-.pie__li {
-  font-size: 15px;
-  color: #bbbbbb; }
-  .pie__li a {
-    font-size: 14px;
-    color: #bbbbbb;
+  margin-top: 6%;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 25px;
+  color: #ffffff; }
+  .pie__ul a {
+    font-size: 0.875rem;
+    color: #ffffff;
     display: block;
     transition: all 0.3s ease; }
-    .pie__li a:hover {
+    .pie__ul a:hover {
       text-decoration: none;
-      color: #ffffff; }
+      color: #a4a5a5; }
 
 .pie__redes {
   margin-top: 12%; }
@@ -120,8 +122,8 @@ footer {
   width: 100%;
   height: 100%;
   background-color: #111214;
-  color: #bbbbbb;
-  font-size: 14px;
+  color: #a4a5a5;
+  font-size: 0.875rem;
   padding: 1%; }
 
 body {
@@ -142,17 +144,18 @@ main {
   right: 0;
   bottom: 0;
   left: 0;
-  padding-bottom: 30px;
-  color: #fff;
+  padding-top: 2%;
+  padding-bottom: 3%;
+  color: #ffffff;
   text-align: center;
   background: rgba(0, 0, 0, 0.6); }
   .carousel-caption h1, .carousel-caption h2 {
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 15px; }
+    font-size: 0.938rem; }
   .carousel-caption p {
     font-weight: 400;
-    font-size: 14px; }
+    font-size: 0.875rem; }
 
 .img-slide1 {
   height: 82vh;
@@ -181,6 +184,8 @@ main {
   height: 100%;
   display: flex;
   justify-content: space-around;
+  font-family: "Montserrat", sans-serif;
+  color: #222227;
   padding: 3%; }
 
 .novedades__card {
@@ -188,29 +193,26 @@ main {
   flex-basis: 29%; }
 
 .novedades__titulo {
-  width: 100%;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 17px;
-  letter-spacing: 1px;
-  color: #1d252d;
+  font-size: 1.06rem;
   margin-bottom: 5%; }
 
 .novedades__parrafo {
-  color: #333f48;
-  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 25px;
   margin: 3%; }
 
 .novedades__whatsapp {
-  font-family: "Montserrat", sans-serif;
   margin: 5%; }
   .novedades__whatsapp a {
     text-decoration: none;
     background: #830065aa;
-    color: #fff;
+    color: #ffffff;
     padding: 3%;
     border-radius: 25px;
-    font-size: 12px;
+    font-size: 0.75rem;
     text-transform: uppercase;
     transition: 0.5s; }
     .novedades__whatsapp a:hover {
@@ -243,14 +245,12 @@ main {
   justify-content: center; }
 
 .obras-sociales__titulo {
-  width: 100%;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 17px;
-  letter-spacing: 1px;
+  font-size: 1.06rem;
   padding: 2%;
   text-align: center;
-  color: #bbbbbb;
+  color: #a4a5a5;
   background: rgba(0, 0, 0, 0.6); }
 
 .obras-sociales__imagenes--img {
@@ -265,53 +265,48 @@ main {
 .institucional {
   width: 90%;
   margin: 2% auto;
+  color: #111214;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, auto);
-  grid-template-areas: "sobrenostexto sobrenosimg sobrenosimg " "staffimg staffimg stafftexto" "misiontexto visiontexto valorestexto"; }
+  grid-template-areas: "sobrenostexto sobrenosimg sobrenosimg" "staffimg staffimg stafftexto" "misiontexto visiontexto valorestexto"; }
+  .institucional img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; }
 
 .institucional__titulo {
-  width: 100%;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 17px;
-  letter-spacing: 1px;
-  text-align: center;
-  padding: 10px;
-  color: #1d252d; }
+  font-size: 1.06rem;
+  text-align: left; }
 
 .institucional__datos {
   text-align: left;
-  margin-top: 18%;
-  letter-spacing: 1px; }
+  margin-top: 8%; }
   .institucional__datos h3 {
+    text-transform: capitalize;
     font-weight: 600;
-    font-size: 15px;
-    text-transform: uppercase; }
+    font-size: 1rem; }
   .institucional__datos h4 {
     font-weight: 600;
-    font-size: 13px; }
+    font-size: 0.813rem; }
   .institucional__datos h5 {
-    font-size: 12px; }
+    font-size: 0.75rem; }
 
 .institucional__parrafo {
-  font-size: 14px;
-  color: #333f48;
-  letter-spacing: 1px;
-  text-align: justify; }
-
-.institucional__imagen {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 10px; }
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
+  margin-top: 10%; }
 
 .institucional__sobrenos {
   grid-area: sobrenostexto;
   background-color: #7ab2b3;
-  height: auto;
-  padding: 20px;
+  padding: 8%;
   border-radius: 10px; }
 
 .institucional__sobrenos-img {
@@ -320,8 +315,7 @@ main {
 .institucional__staff {
   grid-area: stafftexto;
   background-color: #7ab2b3;
-  height: auto;
-  padding: 20px;
+  padding: 8%;
   border-radius: 10px; }
 
 .institucional__staff-img {
@@ -329,34 +323,28 @@ main {
 
 .institucional__mision {
   grid-area: misiontexto;
-  background-color: #a2aaad;
-  color: #333f48;
-  height: auto;
-  padding: 20px;
+  background-color: #a4a5a5;
+  padding: 8%;
   border-radius: 10px; }
 
 .institucional__vision {
   grid-area: visiontexto;
-  background-color: #a2aaad;
-  color: #333f48;
-  height: auto;
-  padding: 20px;
+  background-color: #a4a5a5;
+  padding: 8%;
   border-radius: 10px; }
 
 .institucional__valores {
   grid-area: valorestexto;
-  background-color: #a2aaad;
-  color: #333f48;
-  height: auto;
-  padding: 20px;
+  background-color: #a4a5a5;
+  padding: 8%;
   border-radius: 10px; }
 
 /* servicios */
 .serviciosGrales {
   width: 100%;
   margin-top: 2%;
+  color: #111214;
   display: flex;
-  color: #000000;
   flex-direction: column;
   justify-content: space-around;
   background-image: url("../imagenes/servicios.jpg");
@@ -367,25 +355,31 @@ main {
   padding: 5%;
   margin: 5% 10%;
   background-color: rgba(172, 169, 169, 0.7); }
-
-.estudios__titulo, .especialidades__titulo {
-  width: 100%;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 17px;
-  letter-spacing: 1px;
-  border-bottom: 3px solid transparent;
-  border-image: linear-gradient(90deg, #272727 15%, #830065 83%) 1; }
+  .estudios h1 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.06rem;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(90deg, #111214 15%, #830065 83%) 1; }
 
 .estudios__subtitulo, .especialidades__subtitulo {
-  list-style: none;
-  font-size: 17px;
+  text-transform: capitalize;
   font-weight: 600;
+  font-size: 1rem;
+  list-style: none;
   padding: 5px;
   margin: 2%; }
 
+.estudios__parrafo {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 25px; }
+
 .estudios__ul, .especialidades__ul {
-  padding: 5px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 25px;
+  padding: 1%;
   margin: 2%;
   list-style-image: url("../imagenes/flecha.png");
   list-style-position: inside; }
@@ -394,9 +388,13 @@ main {
   padding: 5%;
   margin: 0% 10% 5%;
   background-color: rgba(172, 169, 169, 0.7); }
-
-.especialidades__titulo {
-  text-align: right; }
+  .especialidades h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.06rem;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(90deg, #830065 15%, #111214 83%) 1;
+    text-align: right; }
 
 .especialidades__subtitulo {
   text-align: right; }
@@ -422,46 +420,47 @@ main {
   border-radius: 4%; }
 
 .formulario__titulo {
-  width: 100%;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 17px;
-  letter-spacing: 1px;
-  color: #fff;
+  font-size: 1.06rem;
+  color: #ffffff;
   text-align: center;
   margin: 0;
-  margin-bottom: 20px; }
+  margin-bottom: 5%; }
 
 .formulario__input {
   width: 100%;
   margin-bottom: 3%;
   padding: 1%;
-  font-size: 17px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 25px;
   border: none; }
   .formulario__input:focus {
     outline: none; }
   .formulario__input::placeholder {
-    font-size: 14px;
-    color: #9e9d9d; }
+    color: #a4a5a5; }
 
 .formulario__textarea {
   width: 100%;
   min-height: 140px;
   padding: 1%;
-  resize: none; }
+  resize: none;
+  font-size: 0.875rem; }
   .formulario__textarea:focus {
     outline: none; }
   .formulario__textarea::placeholder {
-    font-size: 14px;
-    color: #9e9d9d; }
+    color: #a4a5a5; }
 
 .formulario__boton {
   width: 100%;
-  font-size: 15px;
-  background-color: #2d2d30;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 25px;
+  color: #ffffff;
+  background-color: #111214;
   border: none;
-  padding: 2%;
-  color: white; }
+  padding: 2%; }
   .formulario__boton:hover {
     cursor: pointer;
     background-color: #205455; }
@@ -472,11 +471,9 @@ main {
   margin: 2% 0% 10%; }
 
 .mapa__titulo {
-  width: 100%;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 17px;
-  letter-spacing: 1px;
+  font-size: 1.06rem;
   text-align: center;
   padding-bottom: 3%; }
 
@@ -495,33 +492,31 @@ main {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #343434;
+  color: #222227;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap; }
   .error404__contenedor h1 {
-    font-size: 160px;
+    font-size: 10rem;
     margin: 0;
     font-weight: 900;
     letter-spacing: 20px; }
   .error404__contenedor h2 {
-    width: 100%;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 17px;
-    letter-spacing: 1px; }
+    font-size: 1.06rem; }
   .error404__contenedor p {
     padding: 2%;
     font-weight: 600; }
   .error404__contenedor a {
     text-decoration: none;
     background: #830065aa;
-    color: #fff;
+    color: #ffffff;
     padding: 12px 24px;
     border-radius: 25px;
-    font-size: 14px;
+    font-size: 0.875rem;
     text-transform: uppercase;
     transition: 0.4s; }
     .error404__contenedor a:hover {
@@ -533,19 +528,16 @@ main {
     width: 85%; } }
 
 @media screen and (max-width: 768px) {
+  html {
+    font-size: 90%; }
+  .carousel-caption {
+    padding-top: 2%;
+    padding-bottom: 5%; }
   .novedades {
     display: flex;
     flex-direction: column; }
   .novedades__card {
-    margin: 2%; }
-  .novedades__titulo {
-    font-size: 85%; }
-  .novedades__parrafo {
-    font-size: 82%; }
-  .obras-sociales__titulo {
-    font-size: 88%; }
-  .pie__titulo, .pie__parrafo, .pie__li {
-    font-size: 88%; } }
+    margin: 2%; } }
 
 @media screen and (max-width: 900px) {
   .pie {
@@ -567,16 +559,14 @@ main {
   .nav-link::before,
   .nav-link::after {
     height: 2px; }
-  .img-slide1 {
-    height: 85vh; }
-  .img-slide2 {
-    height: 85vh; }
-  .img-slide3 {
+  .img-slide1, .img-slide2, .img-slide3 {
     height: 85vh; } }
 
 @media all and (max-width: 1024px) {
   .institucional {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 90%; } }
+    justify-content: space-between;
+    width: 90%; }
+  .institucional__parrafo {
+    margin-top: 5%; } }

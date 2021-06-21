@@ -27,18 +27,19 @@ main{
     right: 0;
     bottom: 0;
     left: 0;
-    padding-bottom: 30px;
-    color: #fff;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    color: $color-blanco;
     text-align:center;
     background: $color-transparente;
     h1,h2{
         text-transform: uppercase;
         font-weight: 500;
-        font-size: 15px;
+        font-size: 0.938rem;
     }
     p{
         font-weight: 400;
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 }
 
@@ -76,6 +77,8 @@ main{
     height: 100%;
     display: flex;
     justify-content: space-around;
+    font-family: $fuenteMain;
+    color: $gris-iron;
     padding: 3%;
 }
 
@@ -86,27 +89,23 @@ main{
 
 .novedades__titulo{
     @include titulos();
-    color: #1d252d;
     margin-bottom: 5%;
-
 }
 
 .novedades__parrafo{
-    color: #333f48;;
-    font-size: 14px;
+    @include parrafo();
     margin: 3%;
 }
 
 .novedades__whatsapp{
-    font-family: $fuenteMain;
     margin: 5%;
     a{
         text-decoration: none;
         background: #830065aa;
-        color: #fff;
+        color: $color-blanco;
         padding: 3%;
         border-radius: 25px;
-        font-size: 12px;
+        font-size: 0.75rem;
         text-transform: uppercase;
         transition: 0.5s;
         &:hover{
@@ -153,7 +152,7 @@ main{
     @include titulos();
     padding: 2%;
     text-align: center;
-    color: #bbbbbb;
+    color: $gris-claro;
     background: $color-transparente;
 }
 
@@ -175,57 +174,53 @@ main{
 .institucional{
 	width: 90%;
 	margin: 2% auto;
+    color: $gris-carbon;
 	display: grid;
 	grid-gap: 10px;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(3, auto);
-	grid-template-areas: "sobrenostexto sobrenosimg sobrenosimg "
+	grid-template-areas: "sobrenostexto sobrenosimg sobrenosimg"
 						 "staffimg staffimg stafftexto"
 						 "misiontexto visiontexto valorestexto";
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
 }
 
 .institucional__titulo{
     @include titulos();
-    text-align: center;
-    padding: 10px;
-    color: #1d252d;
+    text-align: left;
 }
 
 .institucional__datos{
     text-align: left;
-    margin-top: 18%;
-    letter-spacing: 1px;
+    margin-top: 8%;
     h3{
-    font-weight: 600;
-    font-size: 15px;
-    text-transform: uppercase;}
+        @include subtitulos();
+    }
     h4{
         font-weight: 600;
-        font-size: 13px;
+        font-size: 0.813rem;
     }
     h5{
-        font-size: 12px;
+        font-size: 0.75rem;
     }
 }
 
 .institucional__parrafo{
-    font-size: 14px;
-    color: #333f48;
-    letter-spacing: 1px;
-    text-align: justify;
-}
-
-.institucional__imagen{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 10px;
+    @include parrafo();
+    text-align: left;
+    margin-top: 10%;
 }
 
 .institucional__sobrenos{
     grid-area: sobrenostexto;
-    @include texto-institucional();
-
+    background-color: $color-celeste;
+    padding: 8%;
+    border-radius: 10px;
 }
 
 .institucional__sobrenos-img{
@@ -235,8 +230,9 @@ main{
 
 .institucional__staff{
     grid-area: stafftexto;
-    @include texto-institucional();
-
+    background-color: $color-celeste;
+    padding: 8%;
+    border-radius: 10px;
 }
 
 .institucional__staff-img{
@@ -245,31 +241,33 @@ main{
 
 .institucional__mision{
     grid-area: misiontexto;
-    @include mvv();
-
+    background-color: $gris-claro;
+    padding: 8%;
+    border-radius: 10px;
 }
-
 
 .institucional__vision{
     grid-area: visiontexto;
-    @include mvv();
-
+    background-color: $gris-claro;
+    padding: 8%;
+    border-radius: 10px;
 }
 
 .institucional__valores{
     grid-area: valorestexto;
-    @include mvv();
+    background-color: $gris-claro;
+    padding: 8%;
+    border-radius: 10px;
 }
 
 
 /* servicios */
 
-
 .serviciosGrales{
     width: 100%;
     margin-top: 2%;
+    color: $gris-carbon;
     display: flex;
-    color: #000000;
     flex-direction: column;
     justify-content: space-around;
     background-image:url("../imagenes/servicios.jpg");
@@ -281,24 +279,27 @@ main{
     padding: 5%;
     margin: 5% 10%;
     background-color: rgba(172, 169, 169, 0.7);
+    h1{
+        @include titulos();
+        border-bottom: 3px solid transparent;
+        border-image: linear-gradient(90deg, $gris-carbon 15%, $color-obispo 83%) 1;
+    }
 }
  
-.estudios__titulo{
-    @include titulos();
-    border-bottom: 3px solid transparent;
-    border-image: linear-gradient(90deg, rgb(39, 39, 39) 15%, $color-obispo 83%) 1;
-}
-
 .estudios__subtitulo{
+    @include subtitulos();
     list-style: none;
-    font-size: 17px;
-    font-weight: 600;
     padding: 5px;
     margin: 2%;
 }
 
+.estudios__parrafo{
+    @include parrafo();
+}
+
 .estudios__ul{
-    padding: 5px;
+    @include parrafo();
+    padding: 1%;
     margin: 2%;
     list-style-image: url("../imagenes/flecha.png");
     list-style-position: inside;
@@ -308,11 +309,12 @@ main{
     padding: 5%;
     margin: 0% 10% 5%;
     background-color: rgba(172, 169, 169, 0.7);
-}
-
-.especialidades__titulo{
-    @extend.estudios__titulo;
-    text-align: right;
+    h2{
+        @include titulos();
+        border-bottom: 3px solid transparent;
+        border-image: linear-gradient(90deg, $color-obispo 15%, $gris-carbon 83%) 1;
+        text-align: right;
+    }
 }
 
 .especialidades__subtitulo{
@@ -325,7 +327,6 @@ main{
     text-align: right;
     
 }
-
 
 
 /*formulario de contacto*/
@@ -351,10 +352,10 @@ main{
 
 .formulario__titulo{
     @include titulos();
-    color: #fff;
+    color: $color-blanco;
     text-align: center;
     margin:0;
-    margin-bottom: 20px;
+    margin-bottom: 5%;
 
 }
 
@@ -362,30 +363,27 @@ main{
     width: 100%;
     margin-bottom: 3%;
     padding: 1%;
-    font-size: 17px;
+    @include parrafo();
     border: none;
     &:focus{
         outline: none;
     }
     &::placeholder{
-        font-size: 14px;
-        color: rgb(158, 157, 157);
+        color:$gris-claro;
     }
 }
-
 
 .formulario__textarea{
     width: 100%;
     min-height: 140px;
     padding: 1%;
     resize: none;
+    font-size: 0.875rem;
     &:focus{
         outline: none;
-    
     }
     &::placeholder{
-        font-size: 14px;
-        color: rgb(158, 157, 157);
+        color:$gris-claro;
     }
     
 }
@@ -393,11 +391,11 @@ main{
 
 .formulario__boton{
     width: 100%;
-    font-size: 15px;
-    background-color: #2d2d30;
+    @include parrafo();
+    color: $color-blanco;
+    background-color: $gris-carbon;
     border: none;
     padding: 2%;
-    color: white;
     &:hover{
         cursor: pointer;
         background-color:#205455;
@@ -420,6 +418,7 @@ main{
     padding-bottom: 3%;
 }
 
+
 /*error 404*/
 
 .error404{
@@ -437,35 +436,32 @@ main{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: #343434;
+    color: $gris-iron;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items:center;
     flex-wrap: wrap;
     h1{
-        font-size: 160px;
+        font-size: 10rem;
         margin: 0;
         font-weight: 900;
         letter-spacing: 20px;
     }
-
     h2{
         @include titulos();
     }
-
     p{
         padding: 2%;
         font-weight: 600;
     }
-
     a{
         text-decoration: none;
         background: #830065aa;
-        color: #fff;
+        color:$color-blanco;
         padding: 12px 24px;
         border-radius: 25px;
-        font-size: 14px;
+        font-size: 0.875rem;
         text-transform: uppercase;
         transition: 0.4s;
         &:hover{
@@ -482,11 +478,19 @@ main{
     .formulario{
         width: 85%;
     }
-
 }
 
 
 @media screen and (max-width: 768px){
+    html{
+        font-size: 90%;
+    }
+
+    .carousel-caption {
+        padding-top: 2%;
+        padding-bottom: 5%;
+    }
+
     .novedades{
         display: flex;
         flex-direction: column;
@@ -495,23 +499,6 @@ main{
     .novedades__card{
         margin: 2%;
     }
-
-    .novedades__titulo{
-        font-size: 85%;
-    }
-
-    .novedades__parrafo{
-        font-size: 82%;
-    }
-
-    .obras-sociales__titulo{
-        font-size: 88%;
-    }
-
-    .pie__titulo, .pie__parrafo, .pie__li{
-        font-size: 88%;
-    }
-
 }
 
 @media screen and (max-width: 900px){
@@ -551,30 +538,23 @@ main{
         height: 2px;
     }
 
-    .img-slide1{
+    .img-slide1, .img-slide2, .img-slide3{
         height: 85vh;
     }
       
-    .img-slide2{
-        height: 85vh;
-    }
-      
-    .img-slide3{
-        height: 85vh;   
-    }
 }
-
-
 
 @media all and (max-width: 1024px){
     .institucional {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         width: 90%;
     }
 
+    .institucional__parrafo{
+        margin-top: 5%;
+    }
 
-  
 
 }
