@@ -91,7 +91,8 @@ footer {
   font-size: 1.063rem;
   color: #ffffff;
   text-transform: capitalize;
-  position: relative; }
+  position: relative;
+  letter-spacing: 1px; }
   .pie__titulo:before {
     position: absolute;
     content: '';
@@ -101,19 +102,18 @@ footer {
     background: #830065; }
 
 .pie__parrafo {
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 25px;
+  font-size: 0.813rem;
   color: #ffffff;
-  margin-top: 4%; }
+  margin-top: 4%;
+  margin-right: 2%;
+  letter-spacing: 1px; }
 
 .pie__ul {
+  font-size: 0.813rem;
+  color: #ffffff;
+  letter-spacing: 1px;
   list-style: none;
-  margin-top: 6%;
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 25px;
-  color: #ffffff; }
+  margin-top: 6%; }
 
 .pie__redes {
   margin-top: 12%; }
@@ -200,7 +200,7 @@ main {
 
 .novedades__parrafo {
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 25px;
   margin: 3%; }
 
@@ -265,7 +265,6 @@ main {
 .institucional {
   width: 90%;
   margin: 2% auto;
-  color: #111214;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
@@ -281,7 +280,8 @@ main {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.06rem;
-  text-align: left; }
+  text-align: left;
+  color: #222227; }
 
 .institucional__datos {
   text-align: left;
@@ -298,10 +298,11 @@ main {
 
 .institucional__parrafo {
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 25px;
   text-align: left;
-  margin-top: 10%; }
+  margin-top: 8%;
+  color: #46494d; }
 
 .institucional__sobrenos {
   grid-area: sobrenostexto;
@@ -339,7 +340,7 @@ main {
   padding: 8%;
   border-radius: 10px; }
 
-/* servicios */
+/* empieza servicios */
 .serviciosGrales {
   width: 100%;
   margin-top: 2%;
@@ -352,15 +353,20 @@ main {
   background-repeat: no-repeat; }
 
 .estudios {
-  padding: 5%;
-  margin: 5% 10%;
-  background-color: rgba(172, 169, 169, 0.7); }
+  margin: 2% 15% 1%; }
   .estudios h1 {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1.06rem;
-    border-bottom: 3px solid transparent;
-    border-image: linear-gradient(90deg, #111214 15%, #830065 83%) 1; }
+    padding: 2%;
+    color: #a4a5a5;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px); }
+
+.estudios__contenedor, .especialidades__contenedor {
+  padding: 2%;
+  background-color: rgba(172, 169, 169, 0.4);
+  backdrop-filter: blur(5px); }
 
 .estudios__subtitulo, .especialidades__subtitulo {
   text-transform: capitalize;
@@ -370,33 +376,42 @@ main {
   padding: 5px;
   margin: 2%; }
 
-.estudios__parrafo {
+.estudios__parrafo, .especialidades__parrafo {
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 25px; }
 
 .estudios__ul, .especialidades__ul {
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 25px;
   padding: 1%;
   margin: 2%;
-  list-style-image: url("../imagenes/flecha.png");
-  list-style-position: inside; }
+  list-style: none; }
+
+.fa-arrow-circle-right {
+  padding-right: 2%;
+  color: #830065; }
 
 .especialidades {
-  padding: 5%;
-  margin: 0% 10% 5%;
-  background-color: rgba(172, 169, 169, 0.7); }
+  margin: 1% 15% 2%; }
   .especialidades h2 {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1.06rem;
-    border-bottom: 3px solid transparent;
-    border-image: linear-gradient(90deg, #830065 15%, #111214 83%) 1;
+    padding: 2%;
+    color: #a4a5a5;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
     text-align: right; }
 
+.especialidades__contenedor {
+  text-align: right; }
+
 .especialidades__subtitulo {
+  text-align: right; }
+
+.especialidades__parrafo {
   text-align: right; }
 
 .especialidades__ul {
@@ -433,7 +448,7 @@ main {
   margin-bottom: 3%;
   padding: 1%;
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 25px;
   border: none; }
   .formulario__input:focus {
@@ -455,7 +470,7 @@ main {
 .formulario__boton {
   width: 100%;
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 25px;
   color: #ffffff;
   background-color: #111214;

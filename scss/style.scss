@@ -174,7 +174,6 @@ main{
 .institucional{
 	width: 90%;
 	margin: 2% auto;
-    color: $gris-carbon;
 	display: grid;
 	grid-gap: 10px;
 	grid-template-columns: repeat(3, 1fr);
@@ -193,6 +192,8 @@ main{
 .institucional__titulo{
     @include titulos();
     text-align: left;
+    color: $gris-iron;
+
 }
 
 .institucional__datos{
@@ -213,7 +214,9 @@ main{
 .institucional__parrafo{
     @include parrafo();
     text-align: left;
-    margin-top: 10%;
+    margin-top: 8%;
+    color: $gris-topo;
+
 }
 
 .institucional__sobrenos{
@@ -261,7 +264,7 @@ main{
 }
 
 
-/* servicios */
+/* empieza servicios */
 
 .serviciosGrales{
     width: 100%;
@@ -276,14 +279,20 @@ main{
 }
 
 .estudios{
-    padding: 5%;
-    margin: 5% 10%;
-    background-color: rgba(172, 169, 169, 0.7);
+    margin: 2% 15% 1%;
     h1{
         @include titulos();
-        border-bottom: 3px solid transparent;
-        border-image: linear-gradient(90deg, $gris-carbon 15%, $color-obispo 83%) 1;
+        padding: 2%;
+        color: $gris-claro;
+        background: $color-transparente;
+        backdrop-filter: blur(5px);
     }
+}
+
+.estudios__contenedor{
+    padding: 2%;
+    background-color: rgba(172, 169, 169, 0.4);
+    backdrop-filter: blur(5px);
 }
  
 .estudios__subtitulo{
@@ -301,20 +310,29 @@ main{
     @include parrafo();
     padding: 1%;
     margin: 2%;
-    list-style-image: url("../imagenes/flecha.png");
-    list-style-position: inside;
+    list-style:none;
+}
+
+.fa-arrow-circle-right{
+    padding-right: 2%;
+    color: $color-obispo;
 }
 
 .especialidades{ 
-    padding: 5%;
-    margin: 0% 10% 5%;
-    background-color: rgba(172, 169, 169, 0.7);
+    margin: 1% 15% 2%;
     h2{
         @include titulos();
-        border-bottom: 3px solid transparent;
-        border-image: linear-gradient(90deg, $color-obispo 15%, $gris-carbon 83%) 1;
-        text-align: right;
+        padding: 2%;
+        color: $gris-claro;
+        background: $color-transparente;
+        backdrop-filter: blur(5px);
+        text-align: right
     }
+}
+
+.especialidades__contenedor{
+    @extend.estudios__contenedor;
+    text-align: right;
 }
 
 .especialidades__subtitulo{
@@ -322,10 +340,14 @@ main{
     text-align: right;
 }
 
+.especialidades__parrafo{
+    @extend.estudios__parrafo;
+    text-align: right;
+}
+
 .especialidades__ul{
     @extend.estudios__ul;
     text-align: right;
-    
 }
 
 

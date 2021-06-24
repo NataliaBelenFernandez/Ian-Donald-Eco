@@ -58,6 +58,8 @@ footer{
 	color: $color-blanco;
 	text-transform: capitalize;
 	position: relative;
+	letter-spacing: 1px;
+
   	&:before{
 		position: absolute;
 	  	content: '';
@@ -69,16 +71,19 @@ footer{
 }
 
 .pie__parrafo{
-	@include parrafo();
+	font-size: 0.813rem;
 	color: $color-blanco;
 	margin-top: 4%;
+	margin-right: 2%;
+	letter-spacing: 1px;
 }
 
 .pie__ul{
+	font-size: 0.813rem;
+	color: $color-blanco;
+	letter-spacing: 1px;
     list-style: none;
 	margin-top: 6%;
-	@include parrafo();
-	color: $color-blanco;
 }
 
 .pie__redes{
