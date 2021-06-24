@@ -467,9 +467,12 @@ main {
 
 /*mapa*/
 .mapa {
+  margin-top: 2%;
   text-align: center;
   padding: 2% 0% 7%;
   background-color: #a4a5a5; }
+  .mapa iframe {
+    box-shadow: 1px 3px 33px -1px #5e5e5e; }
 
 .mapa__titulo {
   text-transform: uppercase;

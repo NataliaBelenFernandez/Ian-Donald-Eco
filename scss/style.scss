@@ -408,9 +408,13 @@ main{
 /*mapa*/
 
 .mapa{
+    margin-top: 2%;
     text-align: center;
     padding: 2% 0% 7%;
     background-color: $gris-claro;
+    iframe{
+        box-shadow: 1px 3px 33px -1px rgba(94,94,94,1);
+    }
 }
 
 .mapa__titulo{
