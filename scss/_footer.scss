@@ -12,7 +12,6 @@ footer{
 	display: flex;
     justify-content: space-evenly;
 	padding: 2%;
-	
 }
 
 .pie__div1{
@@ -27,7 +26,6 @@ footer{
 			color: $gris-claro;
 		}
 	}
-	
 }
 
 .pie__div2{
@@ -59,7 +57,6 @@ footer{
 	text-transform: capitalize;
 	position: relative;
 	letter-spacing: 1px;
-
   	&:before{
 		position: absolute;
 	  	content: '';

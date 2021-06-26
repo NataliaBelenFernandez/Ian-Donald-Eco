@@ -36,6 +36,10 @@ Las fuentes utilizadas fueron dos:
 ### Font Awesom
 Se utilizaron diferentes íconos como los de Instagram, Facebook, WhatsApp, entre otros.
 
+## Repositorio
+
+https://github.com/NataliaBelenFernandez/Ian-Donald-Eco
+
 ------------
 
 El sitio web fue creado con ❤️ tratando de aplicar todo lo visto y aprendido en la cursada ⌨️ de la mejor manera posible 😊
