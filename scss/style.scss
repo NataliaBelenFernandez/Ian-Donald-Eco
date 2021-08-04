@@ -340,39 +340,168 @@ main{
     text-align: right;
 }
 
-/*formulario de contacto*/
+/*portal ingreso pacientes*/
 
-.contacto{
+.pacientes {
     width: 100%;
     height: 100%;
-    background-image: url("../imagenes/contacto.jpg");
+    background-image: url("../imagenes/pacientes.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     padding: 4%;
     margin-top: 2%;
 }
 
-.formulario{
-    width: 450px;
+.pacientes__contenedor {
+    width: 50%;
     margin: 3% auto;
     background: $color-transparente;
     padding: 3%;
     border-radius: 4%;
+    h1 {
+        @include titulos();
+        color: $color-blanco;
+        text-shadow: 2px 2px 2px rgb(14, 14, 14);
+        text-align: center;
+        margin:0;
+        margin-bottom: 5%;
+    }
+    h2 {
+        @include subtitulos();
+        color: $gris-carbon;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+    input{
+        width: 100%;
+        margin-bottom: 3%;
+        padding: 1%;
+        @include parrafo();
+        border: none;
+        &:focus{
+            outline: none;
+        }
+        &::placeholder{
+            color:$gris-claro;
+        }
+    }
+    button {
+        width: 100%;
+        @include parrafo();
+        color: $color-blanco;
+        background-color: $gris-carbon;
+        text-decoration: none;
+        border: none;
+        padding: 2%;
+        transition: 0.4s; 
+        &:hover{
+            cursor: pointer;
+            background-color:#205455;
+        }
+        
+    }
+    
 }
 
-.formulario__titulo{
-    @include titulos();
-    color: $color-blanco;
-    text-align: center;
-    margin:0;
+
+
+/*formulario de contacto con google maps*/
+.container {
+    width: 100%;
+	height: 100%;
+    margin-top: 4%;
     margin-bottom: 5%;
 }
 
-.formulario__input{
+.contacto {
+	width: 100%;
+	height: auto;
+	margin: auto;
+	display: flex;
+    flex-wrap: wrap;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.contacto__box {
+	padding: 2%;
+    text-align: center;
+    h1,h2{
+        @include titulos();
+        color: $color-blanco;
+        margin-bottom: 10%;
+    }
+    i {
+        font-size: 2rem;
+        margin: 5%;
+    }
+    p {
+        @include parrafo();
+        margin-top: 1%;
+        margin-bottom: 8%;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        li {
+            list-style: none;
+            display: inline-block;
+            margin-top: 5%;
+            a{
+                display: inline-block;
+                height: 45px;
+                width: 45px;
+                background-color: $color-blanco;
+                text-align: center;
+                line-height: 45px;
+                border-radius: 50%;
+                color: $gris-carbon;
+                transition: all 0.5s ease;
+                &:hover{
+                    color: $color-blanco;
+                    background-color: $gris-carbon;
+                }
+                i {
+                    font-size: 1.2rem;
+                    line-height: 30px;
+                }
+                
+            }
+        }
+    }
+    form {
+        padding: 2% 5%;
+    }
+    
+}
+
+.contacto__box:nth-child(1) {
+	flex: 25%;
+    color: $color-blanco;
+	background: $color-obispo;
+}
+
+.contacto__box:nth-child(2) {
+	flex: 40%;
+    background-image: url("../imagenes/contacto.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    color: $color-blanco;
+}
+
+.contacto__box:nth-child(3) {
+	flex: 35%;
+	padding: 0;
+}
+
+.contacto__input {
     width: 100%;
-    margin-bottom: 3%;
+    margin-bottom: 4%;
     padding: 1%;
     @include parrafo();
+    background-color: rgba(165, 165, 165, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: $gris-claro;
     border: none;
     &:focus{
         outline: none;
@@ -382,50 +511,31 @@ main{
     }
 }
 
-.formulario__textarea{
-    width: 100%;
+.contacto__textarea {
+    @extend.contacto__input;
     min-height: 140px;
-    padding: 1%;
     resize: none;
-    font-size: 0.875rem;
-    &:focus{
-        outline: none;
-    }
-    &::placeholder{
-        color:$gris-claro;
-    }
 }
 
-.formulario__boton{
+.contacto__boton {
     width: 100%;
     @include parrafo();
     color: $color-blanco;
-    background-color: $gris-carbon;
+    background-color: rgba(112, 111, 111, 0.3);
     border: none;
     padding: 2%;
     &:hover{
         cursor: pointer;
-        background-color:#205455;
+        background-color: $gris-carbon;
     }
 }
 
-/*mapa*/
-
-.mapa{
-    margin-top: 2%;
-    text-align: center;
-    padding: 2% 0% 7%;
-    background-color: $gris-claro;
-    iframe{
-        box-shadow: 1px 3px 33px -1px rgba(94,94,94,1);
-    }
+.contacto__box iframe {
+	width: 100%;
+	height: 100%;
 }
 
-.mapa__titulo{
-    @include titulos();
-    text-align: center;
-    padding-bottom: 3%;
-}
+
 
 /*error 404*/
 
@@ -481,10 +591,42 @@ main{
 
 /*responsive*/
 
+
 @media screen and (max-width: 480px){
-    .formulario{
-        width: 85%;
+    .contacto__box:nth-child(1) {
+		flex: 100%;
+	}
+
+	.contacto__box:nth-child(2) {
+		flex: 100%;
+	}
+
+	.contacto__box:nth-child(3) {
+		flex: 100%;
+	}
+
+    .contacto__box {
+        h1,h2{
+            margin: 5%;
+        }
+        i {
+            margin: 3%;
+        }
+        p {
+            margin: 2%;
+        }
+        ul {
+            margin: 1%;
+        }
     }
+}
+
+@media screen and (max-width: 668px){
+    .pacientes__contenedor {
+        width: 65%;
+
+    }
+
 }
 
 @media screen and (max-width: 768px){
@@ -505,6 +647,7 @@ main{
     .novedades__card{
         margin: 2%;
     }
+
 }
 
 @media screen and (max-width: 900px){
@@ -545,6 +688,7 @@ main{
     .img-slide1, .img-slide2, .img-slide3{
         height: 85vh;
     }
+
 }
 
 @media all and (max-width: 1024px){

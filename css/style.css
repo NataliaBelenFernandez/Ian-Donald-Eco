@@ -417,84 +417,177 @@ main {
 .especialidades__ul {
   text-align: right; }
 
-/*formulario de contacto*/
-.contacto {
+/*portal ingreso pacientes*/
+.pacientes {
   width: 100%;
   height: 100%;
-  background-image: url("../imagenes/contacto.jpg");
+  background-image: url("../imagenes/pacientes.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 4%;
   margin-top: 2%; }
 
-.formulario {
-  width: 450px;
+.pacientes__contenedor {
+  width: 50%;
   margin: 3% auto;
   background: rgba(0, 0, 0, 0.6);
   padding: 3%;
   border-radius: 4%; }
+  .pacientes__contenedor h1 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.06rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px #0e0e0e;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 5%; }
+  .pacientes__contenedor h2 {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #111214;
+    text-align: center;
+    margin-bottom: 5%; }
+  .pacientes__contenedor input {
+    width: 100%;
+    margin-bottom: 3%;
+    padding: 1%;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 25px;
+    border: none; }
+    .pacientes__contenedor input:focus {
+      outline: none; }
+    .pacientes__contenedor input::placeholder {
+      color: #a4a5a5; }
+  .pacientes__contenedor button {
+    width: 100%;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 25px;
+    color: #ffffff;
+    background-color: #111214;
+    text-decoration: none;
+    border: none;
+    padding: 2%;
+    transition: 0.4s; }
+    .pacientes__contenedor button:hover {
+      cursor: pointer;
+      background-color: #205455; }
 
-.formulario__titulo {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1.06rem;
-  color: #ffffff;
-  text-align: center;
-  margin: 0;
+/*formulario de contacto con google maps*/
+.container {
+  width: 100%;
+  height: 100%;
+  margin-top: 4%;
   margin-bottom: 5%; }
 
-.formulario__input {
+.contacto {
   width: 100%;
-  margin-bottom: 3%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; }
+
+.contacto__box {
+  padding: 2%;
+  text-align: center; }
+  .contacto__box h1, .contacto__box h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.06rem;
+    color: #ffffff;
+    margin-bottom: 10%; }
+  .contacto__box i {
+    font-size: 2rem;
+    margin: 5%; }
+  .contacto__box p {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 25px;
+    margin-top: 1%;
+    margin-bottom: 8%; }
+  .contacto__box ul {
+    padding: 0;
+    margin: 0; }
+    .contacto__box ul li {
+      list-style: none;
+      display: inline-block;
+      margin-top: 5%; }
+      .contacto__box ul li a {
+        display: inline-block;
+        height: 45px;
+        width: 45px;
+        background-color: #ffffff;
+        text-align: center;
+        line-height: 45px;
+        border-radius: 50%;
+        color: #111214;
+        transition: all 0.5s ease; }
+        .contacto__box ul li a:hover {
+          color: #ffffff;
+          background-color: #111214; }
+        .contacto__box ul li a i {
+          font-size: 1.2rem;
+          line-height: 30px; }
+  .contacto__box form {
+    padding: 2% 5%; }
+
+.contacto__box:nth-child(1) {
+  flex: 25%;
+  color: #ffffff;
+  background: #830065; }
+
+.contacto__box:nth-child(2) {
+  flex: 40%;
+  background-image: url("../imagenes/contacto.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #ffffff; }
+
+.contacto__box:nth-child(3) {
+  flex: 35%;
+  padding: 0; }
+
+.contacto__input, .contacto__textarea {
+  width: 100%;
+  margin-bottom: 4%;
   padding: 1%;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 25px;
+  background-color: rgba(165, 165, 165, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: #a4a5a5;
   border: none; }
-  .formulario__input:focus {
+  .contacto__input:focus, .contacto__textarea:focus {
     outline: none; }
-  .formulario__input::placeholder {
+  .contacto__input::placeholder, .contacto__textarea::placeholder {
     color: #a4a5a5; }
 
-.formulario__textarea {
-  width: 100%;
+.contacto__textarea {
   min-height: 140px;
-  padding: 1%;
-  resize: none;
-  font-size: 0.875rem; }
-  .formulario__textarea:focus {
-    outline: none; }
-  .formulario__textarea::placeholder {
-    color: #a4a5a5; }
+  resize: none; }
 
-.formulario__boton {
+.contacto__boton {
   width: 100%;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 25px;
   color: #ffffff;
-  background-color: #111214;
+  background-color: rgba(112, 111, 111, 0.3);
   border: none;
   padding: 2%; }
-  .formulario__boton:hover {
+  .contacto__boton:hover {
     cursor: pointer;
-    background-color: #205455; }
+    background-color: #111214; }
 
-/*mapa*/
-.mapa {
-  margin-top: 2%;
-  text-align: center;
-  padding: 2% 0% 7%;
-  background-color: #a4a5a5; }
-  .mapa iframe {
-    box-shadow: 1px 3px 33px -1px #5e5e5e; }
-
-.mapa__titulo {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1.06rem;
-  text-align: center;
-  padding-bottom: 3%; }
+.contacto__box iframe {
+  width: 100%;
+  height: 100%; }
 
 /*error 404*/
 .error404 {
@@ -543,8 +636,24 @@ main {
 
 /*responsive*/
 @media screen and (max-width: 480px) {
-  .formulario {
-    width: 85%; } }
+  .contacto__box:nth-child(1) {
+    flex: 100%; }
+  .contacto__box:nth-child(2) {
+    flex: 100%; }
+  .contacto__box:nth-child(3) {
+    flex: 100%; }
+  .contacto__box h1, .contacto__box h2 {
+    margin: 5%; }
+  .contacto__box i {
+    margin: 3%; }
+  .contacto__box p {
+    margin: 2%; }
+  .contacto__box ul {
+    margin: 1%; } }
+
+@media screen and (max-width: 668px) {
+  .pacientes__contenedor {
+    width: 65%; } }
 
 @media screen and (max-width: 768px) {
   html {

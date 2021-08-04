@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/c115d4b504.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <meta name="keywords" content="Diagnóstico por Imágenes,Ecografías,4D y 5D,Ginecología,Obstetricia,Endocrinología,Quilmes">
-    <title>IAN DONALD ECODIAGNOSTICO | UBICACION</title>
+    <title>IAN DONALD ECODIAGNOSTICO | PACIENTES</title>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0 text-center">
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
@@ -36,21 +36,30 @@
                         <a class="nav-link" href="servicios.html">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
+                        <a class="nav-link" href="pacientes.html">Pacientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="ubicacion.html">Ubicacion</a>
+                        <a class="nav-link" href="contacto.html">Contacto</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <!-- mapa de ubicacion -->
-    <main> 
-        <div class="mapa">
-            <h1 class="mapa__titulo"> Donde estamos</h1>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6559.481684182!2d-58.280692!3d-34.711716!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32dfe1e8e2e21%3A0xfae147014cc8c499!2sCastro%20Barros%2092%2C%20Bernal%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1621050644150!5m2!1sen!2sar" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>        </div>
+    <!-- ingreso portal de pacientes -->
+    <main class="pacientes">
+        <div>
+            <div class="pacientes__contenedor">
+                <h1>¡Bienvenid@ al portal de pacientes!</h1>
+                <h2>Complete los datos a continuación</h2>
+                <input type="text" placeholder="Nombre y Apellido" id="nombre">
+                <input type="number" placeholder="Edad" id="edad"> 
+                <input type="text" placeholder="Obra Social" id="obraSocial"> 
+                <input type="text" placeholder="Telefono" id="telefono"> 
+                <input type="text" placeholder= "Correo Electronico" id="mail"> 
+                <button onclick='cargarDatos()'>Cargar Datos</button> 
+            </div>
+            <p id= "pacientesId"></p>
         </div>
     </main>
 
@@ -96,6 +105,7 @@
     <script>
         new WOW().init();
     </script>
+    <script src="./js/main.js"></script>
     
 </body>
 </html>
