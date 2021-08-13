@@ -1,10 +1,11 @@
 
 let fichaPaciente = []
 
+// remplazo onclick del html por evento
 let miBoton = document.getElementById("miBoton");
-
 miBoton.addEventListener("click", cargarDatos);
 
+// funcion que se ejecuta cada vez que se hace click en el boton
 function cargarDatos(){
     class datos { 
         constructor(nombre,edad,os,telefono,mail) {
@@ -16,6 +17,7 @@ function cargarDatos(){
         }
     }
 
+    // tomo valor de entrada y lo guardo en variable
     let nombre = document.getElementById("nombre").value;
     let edad = document.getElementById("edad").value;
     let os = document.getElementById("obraSocial").value;
@@ -23,25 +25,35 @@ function cargarDatos(){
     let mail = document.getElementById("mail").value;
 
     if (nombre != "" && edad != "" && os != "" && telefono != "" && mail!= "" ){
-        const paciente1 = new datos(nombre,edad,os,telefono,mail);
-        fichaPaciente.push (paciente1);
-
-        localStorage.setItem("datosPacientes",JSON.stringify(fichaPaciente));
+        // si input es disinto a vacio se ejecuta:
         
-        console.table(fichaPaciente)
+        const paciente1 = new datos(nombre,edad,os,telefono,mail);
+        fichaPaciente.push (paciente1); // lo pusheo al array
 
-        const texto = document.createElement("div");
-        texto.id = "datosPacientes";
-        texto.textContent = `Nombre: ${paciente1.nombre} Edad: ${paciente1.edad} Obra Social: ${paciente1.os} Telefono: ${paciente1.telefono} Mail: ${paciente1.mail}`;
-        texto.classList.add("fichaEstilo");
-        document.getElementById("pacientesId").appendChild(texto);
 
-        mostrarEnvioCorrecto("Datos cargados exitosamente");
+        localStorage.setItem("datosPacientes",JSON.stringify(fichaPaciente)); // lo convierto a string
+        
+        console.table(fichaPaciente);
+
+        // creo tabla para que se muestre datos ingresados con Jquery y le doy clase
+
+        let tabla = `<table><tr><th>Nombre y Apellido</th><td>${paciente1.nombre}</td></tr>
+        <tr><th>Edad</th><td>${paciente1.edad}</td></tr>
+        <tr><th>Obra Social</th><td>${paciente1.os}</td></tr>
+        <tr><th>Telefono</th><td>${paciente1.telefono}</td></tr>
+        <th>Mail</th><td>${paciente1.mail}</td></tr></table>`
+        
+        $(".pacientes").append(tabla);
+
+        $("table").addClass("fichaEstilo");
+        
+        mostrarEnvioCorrecto();
 
     }else {
-        mostrarError("Por favor ingrese todos los datos");
+        mostrarError();
     };
 
+    // se limpian los inputs una vez cargados los datos
     document.getElementById("nombre").value = "";
     document.getElementById("edad").value = "";
     document.getElementById("obraSocial").value = "";
@@ -50,31 +62,32 @@ function cargarDatos(){
 
 }
 
-const formulario = document.querySelector("#form");
  
-function mostrarEnvioCorrecto (mensaje) {
-    const envioCorrecto = document.createElement('p');
-    envioCorrecto.textContent = mensaje;
-    envioCorrecto.classList.add("correcto");
-    console.log(envioCorrecto);
+function mostrarEnvioCorrecto(){
+
+    // con Jquery creo h3 y le doy clase
+    let envioCorrecto = `<h3> Datos cargados exitosamente</h3>`
+    $(".pacientes__ficha").append(envioCorrecto);
+
+    $(".pacientes__ficha > h3").addClass("correcto");
     
-    formulario.appendChild(envioCorrecto);
+    //despues de 3 segundos se borra el h3
     setTimeout(()=>{
-        envioCorrecto.remove();
-    },5000);
-
-
-}
-
-function mostrarError(mensaje){
-    const error = document.createElement('p');
-    error.textContent = mensaje;
-    error.classList.add('error');
-    console.log(error);
-
-    formulario.appendChild(error);
-    setTimeout(()=>{
-        error.remove();
+        $(".pacientes__ficha > h3").append(envioCorrecto).remove();
     },3000);
 }
 
+function mostrarError(){
+
+    // con Jquery creo h3 y le doy clase
+    let error = `<h3>Por favor ingrese todos los datos</h3>`
+    $(".pacientes__ficha").append(error);
+
+    $(".pacientes__ficha > h3").addClass("error"); 
+
+    //despues de 3 segundos se borra el h3
+    setTimeout(()=>{
+        $(".pacientes__ficha > h3").append(error).remove();
+    },3000);
+ 
+}

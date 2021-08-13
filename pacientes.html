@@ -48,8 +48,8 @@
 
     <!-- ingreso portal de pacientes -->
     <main class="pacientes">
-        <div>
-            <div class="pacientes__contenedor">
+        <div class="pacientes__contenedor">
+            <div class="pacientes__ficha">
                 <h1>¡Bienvenid@ al portal de pacientes!</h1>
                 <h2>Complete los datos a continuación</h2>
                 <input type="text" placeholder="Nombre y Apellido" id="nombre">
@@ -58,11 +58,8 @@
                 <input type="text" placeholder="Telefono" id="telefono"> 
                 <input type="text" placeholder= "Correo Electronico" id="mail"> 
                 <button id="miBoton">Cargar Datos</button> 
-                <p id="form"></p>
             </div>
-            <br>
-            <p id= "pacientesId"></p>
-        </div>
+        </div>    
     </main>
 
     <!-- footer con los medios de contactos y redes -->
@@ -108,6 +105,7 @@
         new WOW().init();
     </script>
     <script src="./js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
 </body>
 </html>

@@ -342,23 +342,27 @@ main{
 
 /*portal ingreso pacientes*/
 
-.pacientes {
+.pacientes{
+    width: 100%;
+    height: 100%;
+}
+
+.pacientes__contenedor {
     width: 100%;
     height: auto;
     background-image: url("../imagenes/pacientes.jpg");
     background-size:cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     padding: 4%;
     margin-top: 2%;
 }
 
-.pacientes__contenedor {
-    width: 40%;
+.pacientes__ficha {
+    width: 35%;
     min-width: 400px;
-    height: auto;
     margin: auto;
     background: $color-transparente;
-    padding: 3%;
+    padding: 2%;
     border-radius: 4%;
     display: flex;
     justify-content:space-evenly;
@@ -380,8 +384,8 @@ main{
 
     }
     input{
-        width: 90%;
-        margin: 2%;
+        width: 80%;
+        margin: 1%;
         padding: 1%;
         @include parrafo();
         border: none;
@@ -399,7 +403,8 @@ main{
         background-color: $gris-carbon;
         text-decoration: none;
         border: none;
-        margin-top: 8%;
+        margin-top: 4%;
+        margin-bottom: 6%;
         padding: 2%;
         transition: 0.4s; 
         &:hover{
@@ -414,13 +419,28 @@ main{
 .error, .correcto {
     @include parrafo ();
     color: $color-blanco;
-    margin-top: 10%;
+    margin-top: 4%;
 }
 
 .fichaEstilo {
-    @include parrafo ();
-    text-align: center;
-    background-color: $color-blanco;
+    width: 60%;
+    margin: 2% auto;
+    th{
+        width: 20%;
+        border: 1px solid #ddd;
+        padding: 1%;
+        @include subtitulos();
+        color: $gris-carbon;
+        background-color: $gris-topo;
+    }
+    td{
+        width: 40%;
+        border: 1px solid #ddd;
+        padding: 1%;
+        @include parrafo();
+        color: $gris-carbon;
+        background-color: $gris-claro;
+    }
 }
 
 
@@ -613,7 +633,7 @@ main{
 
 
 @media screen and (max-width: 480px){
-    .pacientes__contenedor {
+    .pacientes__ficha {
         width: 95%;
         min-width: 0;
     }
