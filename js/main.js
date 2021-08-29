@@ -8,12 +8,15 @@ miBoton.addEventListener("click", cargarDatos);
 // funcion que se ejecuta cada vez que se hace click en el boton
 function cargarDatos(){
     class datos { 
-        constructor(nombre,edad,os,telefono,mail) {
+        constructor(nombre,edad,os,socio,telefono,mail,fecha,rango) {
             this.nombre = nombre;
             this.edad = edad;
             this.os = os;
+            this.socio = socio;
             this.telefono = telefono;
             this.mail = mail;
+            this.fecha = fecha;
+            this.rango = rango;
         }
     }
 
@@ -21,13 +24,16 @@ function cargarDatos(){
     let nombre = document.getElementById("nombre").value;
     let edad = document.getElementById("edad").value;
     let os = document.getElementById("obraSocial").value;
+    let socio = document.getElementById("numObraSocial").value;
     let telefono = document.getElementById("telefono").value;
     let mail = document.getElementById("mail").value;
+    let fecha = document.getElementById("fecha").value
+    let rango = document.getElementById("rango").value
 
-    if (nombre != "" && edad != "" && os != "" && telefono != "" && mail!= "" ){
+    if (nombre != "" && edad != "" && os != "" && socio != ""&& telefono != "" && mail!= "" && fecha != ""  && rango != ""){
         // si input es disinto a vacio se ejecuta:
         
-        const paciente1 = new datos(nombre,edad,os,telefono,mail);
+        const paciente1 = new datos(nombre,edad,os,socio,telefono,mail,fecha,rango);
         fichaPaciente.push (paciente1); // lo pusheo al array
 
 
@@ -37,15 +43,24 @@ function cargarDatos(){
 
         // creo tabla para que se muestre datos ingresados con Jquery y le doy clase
 
-        let tabla = `<table><tr><th>Nombre y Apellido</th><td>${paciente1.nombre}</td></tr>
+        let tabla = `<table>
+        <tr><td colspan="2">Dentro de las 24hs habiles se confirmara el turno solicitado por medio de los canales de contactos cargados </td></tr>
+        <tr><th>Nombre y Apellido</th><td>${paciente1.nombre}</td></tr>
         <tr><th>Edad</th><td>${paciente1.edad}</td></tr>
         <tr><th>Obra Social</th><td>${paciente1.os}</td></tr>
+        <tr><th>Numero Afiliado</th><td>${paciente1.socio}</td></tr>
         <tr><th>Telefono</th><td>${paciente1.telefono}</td></tr>
-        <th>Mail</th><td>${paciente1.mail}</td></tr></table>`
-        
+        <th>Mail</th><td>${paciente1.mail}</td></tr>
+        <th>Fecha</th><td>${paciente1.fecha}</td></tr>
+        <th>Preferencia Horaria</th><td>${paciente1.rango}</td></tr></table>`
+
         $(".pacientes").append(tabla);
 
-        $("table").addClass("fichaEstilo");
+        $("table").fadeIn("slow", function(){
+            $("table").fadeOut(9000);
+        }); 
+        
+        $("table").addClass("table table-responsive-sm table-dark");
         
         mostrarEnvioCorrecto();
 
@@ -57,8 +72,11 @@ function cargarDatos(){
     document.getElementById("nombre").value = "";
     document.getElementById("edad").value = "";
     document.getElementById("obraSocial").value = "";
+    document.getElementById("numObraSocial").value = "";
     document.getElementById("telefono").value = "";
     document.getElementById("mail").value = "";
+    document.getElementById("fecha").value = "";
+    document.getElementById("rango").value = "";
 
 }
 
