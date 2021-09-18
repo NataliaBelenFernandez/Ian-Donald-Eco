@@ -344,61 +344,53 @@ main{
 
 .pacientes{
     width: 100%;
-    height: 100%;
-}
-
-.pacientes__contenedor {
-    width: 100%;
     height: auto;
     background-image: url("../imagenes/pacientes.jpg");
     background-size:cover;
-    background-repeat: repeat;
-    padding: 4%;
+    background-position: center;
+    padding: 3%;
     margin-top: 2%;
+    h1 {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: $color-blanco;
+        text-shadow: 2px 2px 2px rgb(0, 0, 0);
+        padding: 2%;
+        text-align: center;
+    }
+}
+
+.pacientes__contenedor {
     display: flex;
-    justify-content:space-evenly;
+    flex-direction: row;
     align-items: center;
 }
 
 .pacientes__ficha {
-    width: 35%;
-    min-width: 400px;
-    margin: auto;
-    background: $color-transparente;
-    padding: 2%;
-    border-radius: 4%;
+    width: 60%;
+    padding: 1%;
     display: flex;
-    justify-content:space-evenly;
     align-items: center;
     flex-direction: column;
-    h1 {
-        @include titulos();
-        color: $color-blanco;
-        text-shadow: 2px 2px 2px rgb(14, 14, 14);
-        margin-top: 2%;
-        padding: 2%;
-        text-align: center;
-    }
-    h2 {
-        @include subtitulos();
-        color: $gris-carbon;
-        margin-bottom: 5%;
-        text-align: center;
-
-    }
-    input{
+    input, select{
+        border: none;
+        border-radius: 5px;
         width: 80%;
-        margin: 1%;
+        margin: .8%;
         padding: 1%;
         @include parrafo();
-        border: none;
         &:focus{
+            border-color: #aaa;
+            box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;            
+            color: #222; 
             outline: none;
         }
-        &::placeholder{
-            color:$gris-claro;
+        &:active {
+            border: none;
         }
     }
+
     button {
         width: 40%;
         @include parrafo();
@@ -406,9 +398,8 @@ main{
         background-color: $gris-carbon;
         text-decoration: none;
         border: none;
-        margin-top: 4%;
-        margin-bottom: 6%;
-        padding: 2%;
+        margin-top: 2%;
+        padding: 1%;
         transition: 0.4s; 
         &:hover{
             cursor: pointer;
@@ -419,32 +410,112 @@ main{
     
 }
 
-.rangoHorario{
-    @include subtitulos();
+.opcionesTurnos {
+    width: 40%;
+    text-align: center;
+    color: $gris-carbon;
+    background-color: $color-blanco;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 4%;
+    h2 {
+        @include subtitulos();
+        margin-bottom: 8%;
 
+    }
+    p {
+        @include parrafo();
+    }
+    i {
+        color: $color-obispo;
+        font-size: 2rem;
+        transition: 0.4s;
+        &:hover{
+            color: #830065aa;
+        }
+
+    }
+    h3{
+        @include subtitulos();
+        margin-bottom: 4%;
+        margin-top: 10%;
+    }
 }
 
-.error, .correcto {
+.error {
     @include parrafo ();
-    color: $color-blanco;
+    color: red;
     margin-top: 4%;
+    font-weight: bold;
 }
 
 .table {
-    width: 40%;
+    width: 60%;
     margin: 2% auto;
-    padding: 2%;
     th{
-        width: 20%;
-        padding: 2%;
-        @include subtitulos();
+        width: 30%;
+        @include parrafo();
+        font-weight: bold; 
     }
     td{
-        width: 20%;
-        padding: 2%;
+        width: 30%;
         @include parrafo();
         text-align: center;
     }
+}
+
+
+.modalContenedor {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;  
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+    
+}
+  
+.mostrar {
+    pointer-events: auto;
+    opacity: 3;
+
+}
+  
+.ventanaModal {
+    background-color: $color-blanco;
+    width: 600px;
+    max-width: 100%;
+    padding: 2%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    h3 {
+        @include titulos();
+        color: $gris-carbon;
+        text-shadow: 2px 2px 2px rgb(172, 172, 172);
+        padding: 2%;
+        text-align: center;
+    }
+    p {
+        @include parrafo();
+        opacity: 0.7;
+    
+    }
+}
+  
+.titulocomentarios{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: $gris-carbon;
+    text-shadow: 2px 2px 2px rgb(131, 131, 131);
+    padding: 2%;
+    text-align: center;
 }
 
 /*formulario de contacto con google maps*/
@@ -635,11 +706,6 @@ main{
 
 
 @media screen and (max-width: 480px){
-    .pacientes__ficha {
-        width: 95%;
-        min-width: 0;
-    }
-
     .contacto__box:nth-child(1) {
 		flex: 100%;
 	}
@@ -687,7 +753,23 @@ main{
     .novedades__card{
         margin: 2%;
     }
+
+    .pacientes__contenedor {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pacientes__ficha{
+        width: 90%;
+    }
+
+    .opcionesTurnos{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 70%;
+    }
 }
+
 
 @media screen and (max-width: 900px){
     .pie{

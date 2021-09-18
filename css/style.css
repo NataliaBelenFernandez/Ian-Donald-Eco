@@ -420,59 +420,48 @@ main {
 /*portal ingreso pacientes*/
 .pacientes {
   width: 100%;
-  height: 100%; }
-
-.pacientes__contenedor {
-  width: 100%;
   height: auto;
   background-image: url("../imagenes/pacientes.jpg");
   background-size: cover;
-  background-repeat: repeat;
-  padding: 4%;
-  margin-top: 2%;
+  background-position: center;
+  padding: 3%;
+  margin-top: 2%; }
+  .pacientes h1 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px black;
+    padding: 2%;
+    text-align: center; }
+
+.pacientes__contenedor {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
   align-items: center; }
 
 .pacientes__ficha {
-  width: 35%;
-  min-width: 400px;
-  margin: auto;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 2%;
-  border-radius: 4%;
+  width: 60%;
+  padding: 1%;
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
   flex-direction: column; }
-  .pacientes__ficha h1 {
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 1.06rem;
-    color: #ffffff;
-    text-shadow: 2px 2px 2px #0e0e0e;
-    margin-top: 2%;
-    padding: 2%;
-    text-align: center; }
-  .pacientes__ficha h2 {
-    text-transform: capitalize;
-    font-weight: 600;
-    font-size: 1rem;
-    color: #111214;
-    margin-bottom: 5%;
-    text-align: center; }
-  .pacientes__ficha input {
+  .pacientes__ficha input, .pacientes__ficha select {
+    border: none;
+    border-radius: 5px;
     width: 80%;
-    margin: 1%;
+    margin: .8%;
     padding: 1%;
     font-size: 0.875rem;
     font-weight: 500;
-    line-height: 25px;
-    border: none; }
-    .pacientes__ficha input:focus {
+    line-height: 25px; }
+    .pacientes__ficha input:focus, .pacientes__ficha select:focus {
+      border-color: #aaa;
+      box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+      color: #222;
       outline: none; }
-    .pacientes__ficha input::placeholder {
-      color: #a4a5a5; }
+    .pacientes__ficha input:active, .pacientes__ficha select:active {
+      border: none; }
   .pacientes__ficha button {
     width: 40%;
     font-size: 0.875rem;
@@ -482,43 +471,114 @@ main {
     background-color: #111214;
     text-decoration: none;
     border: none;
-    margin-top: 4%;
-    margin-bottom: 6%;
-    padding: 2%;
+    margin-top: 2%;
+    padding: 1%;
     transition: 0.4s; }
     .pacientes__ficha button:hover {
       cursor: pointer;
       background-color: #205455; }
 
-.rangoHorario {
-  text-transform: capitalize;
-  font-weight: 600;
-  font-size: 1rem; }
+.opcionesTurnos {
+  width: 40%;
+  text-align: center;
+  color: #111214;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 4%; }
+  .opcionesTurnos h2 {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 8%; }
+  .opcionesTurnos p {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 25px; }
+  .opcionesTurnos i {
+    color: #830065;
+    font-size: 2rem;
+    transition: 0.4s; }
+    .opcionesTurnos i:hover {
+      color: #830065aa; }
+  .opcionesTurnos h3 {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 4%;
+    margin-top: 10%; }
 
-.error, .correcto {
+.error {
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 25px;
-  color: #ffffff;
-  margin-top: 4%; }
+  color: red;
+  margin-top: 4%;
+  font-weight: bold; }
 
 .table {
-  width: 40%;
-  margin: 2% auto;
-  padding: 2%; }
+  width: 60%;
+  margin: 2% auto; }
   .table th {
-    width: 20%;
-    padding: 2%;
-    text-transform: capitalize;
-    font-weight: 600;
-    font-size: 1rem; }
+    width: 30%;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 25px;
+    font-weight: bold; }
   .table td {
-    width: 20%;
-    padding: 2%;
+    width: 30%;
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 25px;
     text-align: center; }
+
+.modalContenedor {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.3s ease; }
+
+.mostrar {
+  pointer-events: auto;
+  opacity: 3; }
+
+.ventanaModal {
+  background-color: #ffffff;
+  width: 600px;
+  max-width: 100%;
+  padding: 2%;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center; }
+  .ventanaModal h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.06rem;
+    color: #111214;
+    text-shadow: 2px 2px 2px #acacac;
+    padding: 2%;
+    text-align: center; }
+  .ventanaModal p {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 25px;
+    opacity: 0.7; }
+
+.titulocomentarios {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #111214;
+  text-shadow: 2px 2px 2px #838383;
+  padding: 2%;
+  text-align: center; }
 
 /*formulario de contacto con google maps*/
 .container {
@@ -680,9 +740,6 @@ main {
 
 /*responsive*/
 @media screen and (max-width: 480px) {
-  .pacientes__ficha {
-    width: 95%;
-    min-width: 0; }
   .contacto__box:nth-child(1) {
     flex: 100%; }
   .contacto__box:nth-child(2) {
@@ -708,7 +765,16 @@ main {
     display: flex;
     flex-direction: column; }
   .novedades__card {
-    margin: 2%; } }
+    margin: 2%; }
+  .pacientes__contenedor {
+    display: flex;
+    flex-direction: column; }
+  .pacientes__ficha {
+    width: 90%; }
+  .opcionesTurnos {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 70%; } }
 
 @media screen and (max-width: 900px) {
   .pie {

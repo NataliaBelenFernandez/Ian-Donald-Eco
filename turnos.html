@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://kit.fontawesome.com/c115d4b504.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <meta name="keywords" content="Diagnóstico por Imágenes,Ecografías,4D y 5D,Ginecología,Obstetricia,Endocrinología,Quilmes">
-    <title>IAN DONALD ECODIAGNOSTICO | PACIENTES</title>
+    <meta name="keywords" content="Diagnóstico por Imágenes,Ecografías,4D y 5D,Ginecología,Obstetricia,Endocrinología,Quilmes,Turnos">
+    <title>IAN DONALD ECODIAGNOSTICO | TURNOS ONLINE</title>
 </head>
 
-<body>
+<body id="pacientesBody">
     <header>
         <!-- nav con bootstrap-->
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;">
@@ -36,7 +36,7 @@
                         <a class="nav-link" href="servicios.html">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pacientes.html">Pacientes</a>
+                        <a class="nav-link" href="turnos.html">Turnos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contacto.html">Contacto</a>
@@ -47,22 +47,54 @@
     </header>
 
     <!-- ingreso portal de pacientes -->
-    <main class="pacientes">
-        <div class="pacientes__contenedor">
-            <div class="pacientes__ficha">
-                <h1>¡Bienvenid@ al portal de pacientes!</h1>
-                <h2>Complete los datos a continuación</h2>
-                <input type="text" placeholder="Nombre y Apellido" id="nombre">
-                <input type="number" placeholder="Edad" id="edad"> 
-                <input type="text" placeholder="Obra Social / Prepaga" id="obraSocial"> 
-                <input type="text" placeholder="Numero Afiliado" id="numObraSocial">
-                <input type="text" placeholder="Telefono" id="telefono"> 
-                <input type="text" placeholder= "Correo Electronico" id="mail"> 
-                <input type="date" id="fecha">
-                <input type="text" placeholder= "Preferencia Horaria" id="rango"> 
-                <button id="miBoton">Enviar</button>                           
-            </div>
-        </div>    
+    <main>
+        <div class="pacientes">
+            <h1>Solicitá tu turno online</h1>
+            <div class="pacientes__contenedor">
+                <div class="pacientes__ficha">
+                    <input type="text" placeholder="Nombre y Apellido" id="nombre">
+                    <input type="text" placeholder="O.S. / Plan" id="obraSocial"> 
+                    <input type="text" placeholder="Numero de Afiliado" id="afiliado">
+                    <input type="number" placeholder="DNI" id="dni"> 
+                    <input type="text" placeholder="Telefono" id="telefono"> 
+                    <input type="text" placeholder= "Email" id="mail"> 
+                    <input type="text" placeholder= "Tipo de consulta o estudio a realizar" id="consulta"> 
+                    <select name="fecha" required class="select form-control" id="fecha">
+                        <option value="" disabled selected> Día en el que preferiría ser atendido</option>
+                        <option value="Lunes"> Lunes </option>
+                        <option value="Martes"> Martes </option>
+                        <option value="Miercoles"> Miércoles </option>
+                        <option value="Jueves"> Jueves </option>
+                        <option value="Viernes"> Viernes </option>
+                    </select>
+                    <select name="horario" required class="select form-control" id="rango">
+                        <option value="" disabled selected> Horario en el que preferiría ser atendido</option>
+                        <option value="9:00 a 12:59"> 9:00 a 12:59 </option>
+                        <option value="13:00 a 16:59"> 13:00 a 16:59 </option>
+                        <option value="17:00 a 20:59"> 17:00 a 20:59 </option>
+                    </select>
+                    <button id="botonEnviar">Enviar</button> 
+                    <div id="contenedorModal" class="modalContenedor">
+                        <div class="ventanaModal">
+                            <h3>Solicitud de turno enviada</h3>
+                            <p>Dentro de las 48hs hábiles se enviará la confirmación del turno solicitado a través de los medios de contacto cargados.</p>
+                            <button id="cerrar">Cerrar</button>
+                        </div>    
+                    </div>
+                </div>    
+                <div class="opcionesTurnos">
+                    <h2>También podés solicitar tu turno:</h2>
+                    <p>Enviándonos un mensaje por WhatsApp al: 11 3190 1236</p>
+                    <p>Comunicandote a nuestro tel: (54 11) 5192 8680</p>
+                    <p>Escribiéndonos un mail a: iandonald.eco@gmail.com</p>
+                    <h3>¡Miles de pacientes nos recomiendan!</h3>
+                    <p> Para verlos haz click en el corazón</p>
+                    <a href="comentarios.html" target="_blank"><i class="fas fa-heart"></i></a>
+                </div> 
+            </div>           
+        </div>
+        <div id="prueba">
+        </div>
     </main>
 
     <!-- footer con los medios de contactos y redes -->
@@ -91,13 +123,13 @@
             <div class="pie__div3">
                 <h4 class="pie__titulo">Nuestras redes</h4>
                 <div class="pie__redes">
-                    <a href="https://es-la.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/iandonaldeco-123019336621404" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/iandonald.eco/" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>    
             </div>
         </div>
         <div class="copyright">
-            <p> © 2021 IAN DONALD ECODIAGNOSTICO Todos los Derechos Reservados | Diseño y Desarollo: Natalia Fernandez</p>
+            <p> © 2021 IAN DONALD ECODIAGNOSTICO Todos los Derechos Reservados | Diseño y Desarrollo: Natalia Fernandez</p>
         </div>
     </footer>
 
