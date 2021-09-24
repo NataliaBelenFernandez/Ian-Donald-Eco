@@ -17,11 +17,14 @@ $("document").ready(function(){
                 console.log (`Error ${error}`)
             }
         })
-        
-        $("#mostrar").animate({
-            height: 'toggle'
-        });
 
     })
 
-});        
+}); 
+
+$("#api").click(() => {
+    $("#mostrar").animate({
+        height: 'toggle'
+    });
+});
+
