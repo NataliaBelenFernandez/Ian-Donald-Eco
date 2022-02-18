@@ -1,6 +1,6 @@
 # Ian Donald Ecodiagnóstico
 
-Ian Donald Eco es mi proyecto final para el curso de Desarrollo Web de Coder House.
+Ian Donald Eco fue inicialmente mi proyecto final para el curso de Desarrollo Web en Coder House. Luego le sumo el curso de JavaScript donde aplique todo lo visto en el mismo y lograr asi presentar el proyecto final del mismo.
 
 ## Conformación y diseño del proyecto
 
@@ -12,9 +12,15 @@ Se les dio diseño con **CSS** siguiendo una paleta de colores en base al logo d
 
 Se instalo **SASS** para la simplificación del código, implementando nesting, variables, mixin, extend, etc.
 
-Se aplicaron los media queries necesarios para lograr un sitio web responsive estableciendo las medidas requeridas para hacer una estructura flexible y que el contenido de la web se adapte a las distintas resoluciones de pantalla.
+Se aplicaron los **media queries** necesarios para lograr un sitio web responsive estableciendo los breakpoints necesarios para hacer una estructura flexible y que el contenido del sitio se adapte a las distintas resoluciones de pantalla.
 
-## Tecnologías y Bibiliotecas
+Con **JavaScript** se simulo un flujo de trabajo en termino de entrada-procesamiento-salida.
+Se capturan entradas ingresadas por el usuario mediante inputs y eventos. Las salidas se visualizan en el HTML modificando el DOM y asegurando así la respuesta inmediata utilizando animaciones.
+Se manejo la respuesta a llamadas asíncronas, utilizando los datos obtenidos en el procesamiento principal.
+Se declararon funciones con parámetros para definir instrucciones con una tarea específica. Se definen objetos con propiedades y métodos relevantes al contexto. Se emplean arrays para agrupar valores y objetos de forma dinámica. Se almacena en storage datos relevantes generados durante la simulación.
+Esto se puede ver funcionando en turnos.html
+
+## Tecnologías, Bibiliotecas y Librerías
 
 ### Bootstrap 4.6.0
 Se utilizó en dos casos y en ambos a su vez se le aplico un estilo propio:
@@ -35,6 +41,9 @@ Las fuentes utilizadas fueron dos:
 
 ### Font Awesom
 Se utilizaron diferentes íconos como los de Instagram, Facebook, WhatsApp, entre otros.
+
+### jQuery
+Se utilizo para incorporar elementos al DOM y para determinar respuesta a ciertos eventos.
 
 ## Repositorio
 
