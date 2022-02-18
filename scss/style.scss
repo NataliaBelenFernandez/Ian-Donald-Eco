@@ -132,15 +132,13 @@ main{
     background-image: url("../imagenes/osfondo.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    padding: 5% 2%;
+    padding: 3% 2% 4%;
+    margin-bottom: 5%;
 }
 
 .obras-sociales__imagenes{
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: center;
 }
 
@@ -153,9 +151,8 @@ main{
 }
 
 .obras-sociales__imagenes--img{
-    width: 11%;
+    margin: 1%;
     opacity: 0.9;
-    padding: .5%;
     transition: transform .4s;
     &:hover{
         transform: scale(1.1);
@@ -756,6 +753,13 @@ main{
 
     .novedades__card{
         margin: 2%;
+    }
+
+    .obras-sociales{
+        img{
+            width: 25vmin;
+            margin: 2%;
+        }
     }
 
     .pacientes__contenedor {
